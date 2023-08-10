@@ -56,6 +56,7 @@ const publicRoutes = [
 		path: 'product/overview',
 		element: <ProductOverview />,
 	},
+
 	{
 		path: '/',
 		element: <CartItem />,
@@ -88,6 +89,11 @@ const publicRoutes = [
 	{
 		path: '/hihi',
 		element: <ProductPage />,
+	},
+
+	{
+		path: '/collection/all',
+		element: <Shop />,
 	},
 ];
 
