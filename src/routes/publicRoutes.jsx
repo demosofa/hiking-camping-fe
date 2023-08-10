@@ -18,6 +18,11 @@ const publicRoutes = [
 		path: '/collection/all',
 		element: <Shop />,
 	},
+
+	{
+		path: '/collection/all',
+		element: <Shop />,
+	},
 ];
 
 export default publicRoutes;
