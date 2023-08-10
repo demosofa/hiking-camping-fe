@@ -1,4 +1,11 @@
+import Footer from 'pages/Footer/Footer';
+
 /**@type {import("react-router-dom").RouteObject[]} */
-const publicRoutes = [];
+const publicRoutes = [
+	{
+		path: '/hehe',
+		element: <Footer />,
+	},
+];
 
 export default publicRoutes;
