@@ -1,10 +1,12 @@
-import { PrivatePage } from 'components/PrivatePage';
-import { ROLE } from '@constants';
+import { PrivatePage } from '@components';
 
 /**@typedef {import("react-router-dom").RouteObject} RouteObject*/
 
+/**@typedef {import("../constants/role").ROLE} ROLE*/
+
 /**
- * @typedef {Omit<RouteObject, 'children'> & {roles?: ROLE[], children?: Route[]} } Route*/
+ * @typedef {Omit<RouteObject, 'children'> & {roles?: ROLE[], children?: Route[]} } Route
+ */
 
 /**
  * @param {Route[]} routes
@@ -13,10 +15,7 @@ import { ROLE } from '@constants';
 export default function routeBasedRole(routes) {
 	return routes.reduce((prev, { roles, element, children, ...current }) => {
 		if (element) {
-			if (
-				roles != null &&
-				Object.values(ROLE).some((value) => roles.includes(value))
-			) {
+			if (roles != null) {
 				current.element = <PrivatePage roles={roles}>{element}</PrivatePage>;
 			} else current.element = element;
 		}

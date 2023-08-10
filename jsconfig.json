@@ -1,6 +1,6 @@
 {
 	"compilerOptions": {
-		"moduleResolution": "nodenext",
+		"moduleResolution": "node",
 		"esModuleInterop": true,
 		"skipLibCheck": true,
 		"forceConsistentCasingInFileNames": true,
@@ -10,7 +10,7 @@
 		"target": "ESNext",
 		"baseUrl": "./src",
 		"paths": {
-			"@components": ["./component/index"],
+			"@components": ["./components/index"],
 			"@constants": ["./constants/index"],
 			"@reducers/*": ["./reducers/*"],
 			"@layout/*": ["./layout/*"],
