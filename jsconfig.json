@@ -1,0 +1,22 @@
+{
+	"compilerOptions": {
+		"moduleResolution": "nodenext",
+		"esModuleInterop": true,
+		"skipLibCheck": true,
+		"forceConsistentCasingInFileNames": true,
+		"module": "ESNext",
+		"types": ["vite/client"],
+		"jsx": "react-jsx",
+		"target": "ESNext",
+		"baseUrl": "./src",
+		"paths": {
+			"@components": ["./component/index"],
+			"@constants": ["./constants/index"],
+			"@reducers/*": ["./reducers/*"],
+			"@layout/*": ["./layout/*"],
+			"@hooks": ["./hooks/index"],
+			"@utils": ["./utils/index"],
+			"@pages": ["./pages/index"]
+		}
+	}
+}
