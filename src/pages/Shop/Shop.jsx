@@ -1,3 +1,10 @@
+import { Row } from 'antd';
+import './Shop.css';
+
 export const Shop = () => {
-	return <div>Shop</div>;
+	return (
+		<>
+			<Row justify={'center'} className="shop-layout"></Row>
+		</>
+	);
 };
