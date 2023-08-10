@@ -8,7 +8,7 @@ const privateRoutes = [
 		element: <PrivateLayout />,
 		children: [
 			{
-				path: '/',
+				path: '/test',
 				element: <h1>Homepage</h1>,
 				roles: [ROLE.ADMIN],
 			},
