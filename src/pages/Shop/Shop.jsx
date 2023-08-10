@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { Col, Row } from 'antd';
 import Category from 'components/Category/Category';
 import ColorDiv from 'components/ColorDiv/ColorDiv';
@@ -74,8 +73,4 @@ export const Shop = () => {
 			</div>
 		</>
 	);
-=======
-export const Shop = () => {
-	return <div>Shop</div>;
->>>>>>> c436580 (feat: shop)
 };
