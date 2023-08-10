@@ -1,4 +1,4 @@
-import Footer from 'pages/Footer/Footer';
+import Footer from '@layout/Footer/Footer';
 
 /**@type {import("react-router-dom").RouteObject[]} */
 const publicRoutes = [
