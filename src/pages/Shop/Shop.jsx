@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { Col, Row } from 'antd';
 import BootList from 'components/BootList/BootList';
 import BrandList from 'components/BrandList/BrandList';
@@ -82,8 +81,4 @@ export const Shop = () => {
 			</div>
 		</>
 	);
-=======
-export const Shop = () => {
-	return <div>Shop</div>;
->>>>>>> c436580 (feat: shop)
 };
