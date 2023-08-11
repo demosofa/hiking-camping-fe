@@ -75,3 +75,220 @@ ul.site-footer__links li {
 	margin: 0 0 15px 0;
 	font-size: 16px;
 }
+
+.site-footer .footer-bottom {
+	float: left;
+	width: 100%;
+	margin-top: 60px;
+	padding: 40px 0 0px;
+	border-top: 3px solid #e4e4e4;
+}
+
+.site-footer ul {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	display: inline-block;
+	text-align: center;
+}
+
+.site-footer ul.menu li {
+	float: left;
+	padding-right: 15px;
+	padding-top: 5px;
+}
+
+a,
+.text-link {
+	color: #4d3737;
+	text-decoration: none;
+	background: transparent;
+}
+
+.dt-sc-hr-invisible-medium {
+	margin: 25px 0px;
+	padding: 0px;
+	display: block;
+}
+
+.footer-icons {
+	float: right;
+}
+
+.footer-icons .payment-icons {
+	float: left;
+	padding: 0px 0 0 30px;
+	position: relative;
+}
+
+.inline-list li {
+	float: left;
+	margin: 0 2px 0 0;
+	list-style: none;
+}
+
+@media screen and (max-width: 1001px) {
+	.site-footer ul {
+		width: 100%;
+	}
+}
+
+@media screen and (max-width: 1001px) {
+	.site-footer ul.menu li {
+		float: none;
+		display: inline-block;
+	}
+}
+@media screen and (max-width: 1001px) {
+	.footer-icons .payment-icons {
+		padding: 0;
+		float: none;
+		display: inline-block;
+		text-align: center;
+		width: 100%;
+		margin: 15px auto 0;
+	}
+}
+
+@media screen and (max-width: 1001px) {
+	.footer-icons {
+		float: none;
+	}
+}
+
+@media screen and (max-width: 1001px) {
+	.footer-icons .payment-icons li {
+		float: none;
+		display: inline-block;
+	}
+}
+
+.copyright-section {
+	float: left;
+	width: 100%;
+	text-align: center;
+	padding: 20px 0;
+	background: #f4f4f4;
+}
+.copyright {
+	padding: 3px 0 0;
+}
+
+.copyright,
+.copyright a {
+	color: #333333;
+	margin: 0;
+}
+
+@media screen and (max-width: 767px) {
+	.footer-icons .payment-icons li img {
+		width: 50px;
+	}
+}
+
+@media screen and (max-width: 967px) {
+	.footer-icons .payment-icons li img {
+		width: 35px;
+	}
+}
+
+.wrap-icon {
+	padding: 0 20px;
+}
+
+.wrap-icon > .footer-social {
+	font-size: 20px;
+	padding-right: 10px;
+	padding-top: 25px;
+}
+
+.site-footer .address {
+	line-height: 26px;
+	float: left;
+	width: 100%;
+	margin-bottom: 10px;
+}
+
+.mail-footer {
+	font-size: 16px;
+	margin-top: 10px;
+	font-weight: 400;
+}
+
+.phone-icon {
+	padding-right: 5px;
+	font-size: 16px;
+}
+.mail-icon {
+	padding-right: 5px;
+}
+
+@media screen and (max-width: 420px) {
+	.site-footer {
+		padding: 0;
+	}
+}
+
+@media screen and (max-width: 329px) {
+	.copyright-section {
+		width: 209.613px;
+	}
+}
+
+@media screen and (max-width: 351px) {
+	.mail-footer {
+		font-size: 14px;
+	}
+}
+@media screen and (max-width: 329px) {
+	.mail-footer {
+		font-size: 12px;
+	}
+	.site-footer .address {
+		font-size: 12px;
+	}
+
+	.copyright-section {
+		width: 208px;
+	}
+}
+@media screen and (max-width: 328px) {
+	.copyright-section {
+		width: 207.2px;
+	}
+}
+@media screen and (max-width: 327px) {
+	.copyright-section {
+		width: 206.4px;
+	}
+}
+@media screen and (max-width: 326px) {
+	.copyright-section {
+		width: 205.6px;
+	}
+}
+@media screen and (max-width: 325px) {
+	.copyright-section {
+		width: 204px;
+	}
+}
+@media screen and (max-width: 324px) {
+	.copyright-section {
+		width: 203.2px;
+	}
+}
+@media screen and (max-width: 323px) {
+	.copyright-section {
+		width: 202.4px;
+	}
+}
+@media screen and (max-width: 322px) {
+	.copyright-section {
+		width: 201.6px;
+	}
+}
+@media screen and (max-width: 321px) {
+	.copyright-section {
+		width: 200px;
+	}
+}

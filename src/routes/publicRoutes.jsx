@@ -7,6 +7,7 @@ const publicRoutes = [
 		path: '/hehe',
 		element: <Footer />,
 	},
+
 	{
 		path: '/collection/all',
 		element: <Shop />,
