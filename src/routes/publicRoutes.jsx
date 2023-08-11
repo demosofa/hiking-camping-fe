@@ -1,5 +1,5 @@
 import Footer from '@layout/Footer/Footer';
-import { Shop } from 'pages/Shop/Shop';
+import HikingPage from 'pages/Hiking/HikingPage';
 
 /**@type {import("react-router-dom").RouteObject[]} */
 const publicRoutes = [
@@ -7,20 +7,9 @@ const publicRoutes = [
 		path: '/hehe',
 		element: <Footer />,
 	},
-
 	{
-		path: '/collection/all',
-		element: <Shop />,
-	},
-
-	{
-		path: '/collection/all',
-		element: <Shop />,
-	},
-
-	{
-		path: '/collection/all',
-		element: <Shop />,
+		path: '/hoho',
+		element: <HikingPage />,
 	},
 ];
 
