@@ -3,12 +3,12 @@
 	box-shadow: 0px 0px 12px 2px rgba(0, 0, 0, 0.1);
 	color: black;
 	float: left;
-	width: 100%;
-	padding: 40px;
+	padding: 45px;
 }
 
 .footer {
 	padding: 60px;
+	padding-bottom: 0;
 }
 .site-footer .grid__item {
 	padding: 0 20px;
@@ -17,7 +17,7 @@
 .site-footer h4,
 .site-footer .h4 {
 	color: #000000;
-	font-size: 22px;
+	font-size: 20px;
 	font-weight: 650;
 	text-transform: uppercase;
 	position: relative;
@@ -33,7 +33,7 @@
 	position: relative;
 	list-style: none;
 	padding: 0 0 7px 20px;
-	font-weight: 0;
+	font-weight: 450;
 }
 .site-footer__links li a:before {
 	float: left;
