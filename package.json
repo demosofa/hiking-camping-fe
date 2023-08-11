@@ -12,6 +12,7 @@
 		"prepare": "husky install"
 	},
 	"dependencies": {
+		"@ant-design/icons-react-native": "^2.3.2",
 		"@reduxjs/toolkit": "^1.9.5",
 		"@tanstack/react-query": "^4.32.6",
 		"antd": "^5.8.2",
