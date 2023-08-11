@@ -1,9 +1,13 @@
 {
 	"compilerOptions": {
+		"moduleResolution": "node",
+		"esModuleInterop": true,
 		"skipLibCheck": true,
 		"forceConsistentCasingInFileNames": true,
+		"module": "ESNext",
 		"types": ["vite/client"],
 		"jsx": "react-jsx",
+		"target": "ESNext",
 		"baseUrl": "./src",
 		"paths": {
 			"@components": ["./components/index"],

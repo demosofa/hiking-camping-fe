@@ -1,4 +1,4 @@
-import Footer from 'pages/Footer/Footer';
+import Footer from '@layout/Footer/Footer';
 import { Shop } from 'pages/Shop/Shop';
 
 /**@type {import("react-router-dom").RouteObject[]} */
