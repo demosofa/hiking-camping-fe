@@ -20,6 +20,30 @@ export default function SearchContext() {
 			img: 'https://hiking-camping-demo.myshopify.com/cdn/shop/collections/coillection--1_grande.jpg?v=1481088394',
 			type: 'NEW ARRIVALS',
 		},
+		{
+			img: 'https://hiking-camping-demo.myshopify.com/cdn/shop/collections/coillection--1_grande.jpg?v=1481088394',
+			type: 'NEW ARRIVALS',
+		},
+		{
+			img: 'https://hiking-camping-demo.myshopify.com/cdn/shop/collections/coillection--1_grande.jpg?v=1481088394',
+			type: 'NEW ARRIVALS',
+		},
+		{
+			img: 'https://hiking-camping-demo.myshopify.com/cdn/shop/collections/coillection--1_grande.jpg?v=1481088394',
+			type: 'NEW ARRIVALS',
+		},
+		{
+			img: 'https://hiking-camping-demo.myshopify.com/cdn/shop/collections/coillection--1_grande.jpg?v=1481088394',
+			type: 'NEW ARRIVALS',
+		},
+		{
+			img: 'https://hiking-camping-demo.myshopify.com/cdn/shop/collections/coillection--1_grande.jpg?v=1481088394',
+			type: 'NEW ARRIVALS',
+		},
+		{
+			img: 'https://hiking-camping-demo.myshopify.com/cdn/shop/collections/coillection--1_grande.jpg?v=1481088394',
+			type: 'NEW ARRIVALS',
+		},
 	];
 
 	return (
@@ -31,7 +55,6 @@ export default function SearchContext() {
 							<Col
 								key={index}
 								xs={24}
-								// sm={8}
 								md={11}
 								lg={7}
 								xl={5}

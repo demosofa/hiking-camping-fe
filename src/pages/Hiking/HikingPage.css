@@ -1,9 +1,11 @@
 .wrap-container {
-	padding: 60px;
+	padding: 60px 60px 0px 60px;
 }
 
 .wrap-container-color {
 	background-color: white;
+	padding-top: 40px;
+	padding-bottom: 60px;
 }
 
 .grid-link__title {
@@ -22,11 +24,14 @@
 	border-radius: 0 !important;
 	margin-left: 25px !important;
 	border: 1px solid #e4e4e4 !important;
+	margin-top: 25px !important;
+	margin-bottom: 25px !important;
 }
 :where(.css-dev-only-do-not-override-fpg3f5).ant-card .ant-card-body {
 	padding: 0px !important;
 	border-radius: 0 0 8px 8px;
 }
 .hiking-img {
+	border-top: 1px solid #e4e4e4;
 	max-width: 90%;
 }
