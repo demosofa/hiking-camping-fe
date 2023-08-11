@@ -37,18 +37,6 @@ body {
 	place-items: center;
 	min-width: 320px;
 	min-height: 100vh;
-	background: url('https://hiking-camping-demo.myshopify.com/cdn/shop/t/10/assets/colorbody.jpg?v=3041842089583835761580795778');
-	background-attachment: fixed;
-	background-position: top;
-	background-size: cover;
-	-webkit-background-size: cover;
-	-moz-background-size: cover;
-	-o-background-size: cover;
-	height: 100%;
-	width: 100%;
-	background-position: center center;
-	background-repeat: no-repeat;
-	font-size: 14px;
 }
 button:hover {
 	border-color: #646cff;
