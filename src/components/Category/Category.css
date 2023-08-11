@@ -1,0 +1,27 @@
+.category {
+	margin-bottom: 10px;
+}
+
+.category-header {
+	display: flex;
+	align-items: center;
+	cursor: pointer;
+	padding-right: 10px;
+}
+
+.category-name {
+	flex-grow: 1;
+	border-left: 3px solid;
+	padding-left: 10px;
+}
+
+.category-name-link {
+	text-decoration: none;
+	color: #000;
+	transition: color 0.3s ease;
+}
+
+.category-header:hover,
+.category-header:hover .category-name-link {
+	color: #f9c971;
+}

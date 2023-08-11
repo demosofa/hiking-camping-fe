@@ -1,0 +1,39 @@
+.container {
+	padding: 16px;
+}
+
+.size-card {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	transition: border-color 0.3s;
+}
+
+.size-link {
+	text-decoration: none;
+	color: inherit;
+}
+
+.size-card-small {
+	width: 20px;
+	height: 20px;
+	border: 1px solid #eaeaea;
+}
+
+.size-card-medium {
+	width: 29.2px;
+	height: 29.2px;
+	border: 1px solid #eaeaea;
+}
+
+.size-card-large {
+	width: 40px;
+	height: 40px;
+	border: 1px solid #eaeaea;
+}
+
+.size-card:hover,
+.size-card:hover .size-card .size-link {
+	border-color: #ffc107;
+	color: #ffc107;
+}

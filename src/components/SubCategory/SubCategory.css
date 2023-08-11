@@ -1,0 +1,16 @@
+.sub-category {
+	margin-left: 20px;
+	border-left: 1px solid #0000;
+	max-height: 0;
+	overflow: hidden;
+	transition: max-height 0.7s linear;
+}
+
+.sub-category-name {
+	border-left: 2px solid;
+	padding-left: 10px;
+}
+
+.category.open .sub-category {
+	max-height: 100px;
+}
