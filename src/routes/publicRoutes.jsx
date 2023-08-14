@@ -49,6 +49,11 @@ const publicRoutes = [
 		path: '/trekking',
 		element: <Trekking />,
 	},
+
+	{
+		path: '/hihi',
+		element: <ProductPage />,
+	},
 ];
 
 export default publicRoutes;
