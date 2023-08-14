@@ -41,7 +41,7 @@ export default function SearchContext() {
 												</div>
 												<div className="grid-link__title">
 													<h3 className="wrap-text-name">
-														{category.category}
+														{category.parentCategory.category}
 													</h3>
 												</div>
 											</>
