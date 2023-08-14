@@ -1,0 +1,30 @@
+.boot-item {
+	display: flex;
+	margin-bottom: 20px;
+	cursor: pointer;
+	transition: color 0.3s;
+}
+
+.boot-image {
+	width: 112px;
+	height: 112px;
+	margin-right: 10px;
+}
+
+.boot-details {
+	color: #000;
+}
+
+.boot-item:hover .boot-details {
+	color: #f9c971;
+}
+
+.price {
+	color: #f9c971;
+}
+
+.original {
+	text-decoration: line-through;
+	margin-right: 5px;
+	color: #000;
+}

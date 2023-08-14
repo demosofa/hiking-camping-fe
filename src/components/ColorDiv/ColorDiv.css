@@ -1,0 +1,22 @@
+.custom-divs-container {
+	max-width: 220px;
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.custom-div-link {
+	margin: 7px 7px 7px 0;
+	text-decoration: none;
+	display: inline-block;
+}
+
+.custom-div {
+	width: 29.2px;
+	height: 29.2px;
+	transition: border 0.3s ease;
+	border: 1.5px solid #000;
+}
+
+.custom-div:hover {
+	border: 1.5px solid #f9c971;
+}
