@@ -5,9 +5,12 @@ import { ProductPage } from 'pages/ProductPage/ProductPage';
 import { ProductOverview } from 'pages/ProductOverview/ProductOverview';
 import { Shop } from 'pages/Shop/Shop';
 import { CartItem } from 'pages/CartItem/CartItem';
+<<<<<<< HEAD
 import { Trekking } from 'pages/Trekking/Trekking';
 import { Register, Login } from '@pages';
 import { Wishlist } from 'pages/Wishlist/Wishlist';
+=======
+>>>>>>> f406879 (fix: parallax and router)
 
 /**@type {import("react-router-dom").RouteObject[]} */
 const publicRoutes = [
