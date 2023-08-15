@@ -64,6 +64,10 @@ const publicRoutes = [
 		path: 'product/overview',
 		element: <ProductOverview />,
 	},
+	{
+		path: '/',
+		element: <CartItem />,
+	},
 ];
 
 export default publicRoutes;
