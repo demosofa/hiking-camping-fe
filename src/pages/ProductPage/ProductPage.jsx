@@ -1,4 +1,4 @@
-import { Col, Row } from 'antd';
+import { Col, Row, Card } from 'antd';
 import { DownOutlined } from '@ant-design/icons';
 import { Dropdown, Space } from 'antd';
 import Category from 'components/Category/Category';
@@ -9,6 +9,8 @@ import BrandList from 'components/BrandList/BrandList';
 import PriceList from 'components/PriceList/PriceList';
 import BootList from 'components/BootList/BootList';
 import ShopCarousel from 'components/ShopCarousel/ShopCarousel';
+import { useGetProduct } from 'hooks/useGetProduct';
+import Rating from 'components/Rating/Rating';
 
 export const ProductPage = () => {
 	const items = [
@@ -65,18 +67,7 @@ export const ProductPage = () => {
 		},
 	];
 
-	// const [showValue, setShowValue] = useState('12');
-	// const handleShowChange = (e) => {
-	// 	setShowValue(e.item.props.children);
-	// };
-
-	// const showMenu = (
-	// 	<Menu onClick={handleShowChange}>
-	// 		{shows.map((item) => (
-	// 			<Menu.Item key={item.key}>{item.label}</Menu.Item>
-	// 		))}
-	// 	</Menu>
-	// );
+	const { data: products, isLoading: loadingProduct } = useGetProduct();
 
 	return (
 		<>
@@ -181,6 +172,80 @@ export const ProductPage = () => {
 									</Dropdown>
 								</Row>
 							</Col>
+						</Row>
+						<Row justify="center">
+							{loadingProduct ? null : products && products.length > 0 ? (
+								products.map((product) =>
+									product.variant ? (
+										<Col
+											key={product.id}
+											xs={24}
+											md={11}
+											lg={7}
+											xl={8}
+											className="row-wrap"
+										>
+											<a href={`/collections/${product.id}`}>
+												<Card
+													hoverable
+													className="card-wrap"
+													style={{ padding: '0' }}
+													cover={
+														<>
+															<div
+																style={{
+																	display: 'flex',
+																	justifyContent: 'center',
+																	// height: '300px',
+																}}
+															>
+																<img
+																	src={`http://localhost:3000/${product.variant[0].image}`}
+																	className="product-img"
+																	alt="Hiking"
+																	crossOrigin="anonymous"
+																/>
+															</div>
+															<div className="grid-link__title">
+																<a className="product-text-name">
+																	{product.name}
+																</a>
+																<div className="grid-color">
+																	{product.variant.map((variant) => (
+																		<div
+																			key={product.id}
+																			className="grid-image"
+																			style={{
+																				background: `${variant.color.color}`,
+																			}}
+																		></div>
+																	))}
+																</div>
+															</div>
+
+															<div className="product-price-name">
+																<span className="">
+																	${product.variant[0].price}
+																</span>
+																<div className="product-rating">
+																	<Rating rating={product.review[0]?.rating} />
+																</div>
+															</div>
+														</>
+													}
+												/>
+											</a>
+										</Col>
+									) : null
+								)
+							) : (
+								<p>No categories found.</p>
+							)}
+							{/* {
+								loadingProduct ? null : products && products.length > 0 ? 
+								(products.map()):(<p>hehehe</p>
+								)
+							} */}
 						</Row>
 					</Col>
 					<Col span={1}></Col>

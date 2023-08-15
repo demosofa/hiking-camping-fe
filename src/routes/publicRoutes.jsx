@@ -14,7 +14,7 @@ const publicRoutes = [
 	},
 
 	{
-		path: '/hoho',
+		path: '/collections',
 		element: <HikingPage />,
 	},
 
