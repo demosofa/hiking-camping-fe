@@ -152,7 +152,7 @@ export const CartItem = () => {
 	return (
 		<div className="cart_body">
 			<div className="bg-parallax">
-				<Parallax />
+				<Parallax pageTitle={'Your Shopping Cart'} />
 			</div>
 			<div>
 				<ImageTable items={cart} />
