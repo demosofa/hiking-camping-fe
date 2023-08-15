@@ -4,7 +4,7 @@ import { ProductPage } from 'pages/ProductPage/ProductPage';
 
 import { ProductOverview } from 'pages/ProductOverview/ProductOverview';
 import { Shop } from 'pages/Shop/Shop';
-import { CartItem } from 'pages/CartItem';
+import { CartItem } from 'pages/CartItem/CartItem';
 
 /**@type {import("react-router-dom").RouteObject[]} */
 const publicRoutes = [

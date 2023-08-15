@@ -137,6 +137,9 @@ svg {
 	.ant-table-thead .ant-table-cell {
 		display: none;
 	}
+	.btn-handle {
+		margin-bottom: 10px;
+	}
 }
 
 @media only screen and (max-width: 407px) {
