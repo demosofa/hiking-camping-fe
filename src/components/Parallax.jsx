@@ -1,5 +1,4 @@
 import './Parallax.css';
-
 export const Parallax = ({ pageTitle }) => {
 	return (
 		<div className="parallax-position">
