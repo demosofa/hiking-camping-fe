@@ -55,19 +55,6 @@ const publicRoutes = [
 			},
 		],
 	},
-	{
-		path: '/hihi',
-		element: <ProductPage />,
-	},
-
-	{
-		path: 'product/overview',
-		element: <ProductOverview />,
-	},
-	{
-		path: '/',
-		element: <CartItem />,
-	},
 ];
 
 export default publicRoutes;
