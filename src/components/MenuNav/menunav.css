@@ -1,0 +1,33 @@
+.navbar {
+	flex: 3;
+	justify-content: center;
+}
+
+.nav-item {
+	display: flex !important;
+	align-items: center;
+	text-transform: uppercase;
+	font-size: 16px;
+	font-weight: bold;
+	letter-spacing: 1px;
+}
+
+.group-nav > .ant-menu-sub {
+	display: flex;
+	width: 100%;
+	padding: 30px !important;
+}
+
+.group-nav .ant-menu-item-only-child {
+	padding-inline: 12px !important;
+	font-size: 11px;
+}
+
+.group-nav .ant-menu-item-only-child:hover > span {
+	color: #fac012;
+}
+
+.group-nav .group-title {
+	color: #fac012;
+	text-transform: uppercase;
+}
