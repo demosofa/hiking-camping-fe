@@ -1,4 +1,3 @@
-// Category.js
 import { useState } from 'react';
 import SubCategory from '../SubCategory/SubCategory';
 import './Category.css';
@@ -20,9 +19,7 @@ const CategoryItem = ({ name, subCategories }) => {
 						{name}
 					</a>
 				</span>
-				{subCategories.length > 0 && (
-					<span className="category-icon">{expanded ? '-' : '+'}</span>
-				)}
+				{subCategories.length > 0 && <span>{expanded ? '-' : '+'}</span>}
 			</div>
 			<div className="sub-category-list">
 				{subCategories.map((subCategory, index) => (

@@ -21,32 +21,34 @@ export default function SearchContext() {
 									xl={5}
 									className="row-wrap"
 								>
-									<Card
-										hoverable
-										className="card-wrap"
-										style={{ padding: '0' }}
-										cover={
-											<>
-												<div
-													style={{
-														display: 'flex',
-														justifyContent: 'center',
-													}}
-												>
-													<img
-														src={category.image}
-														className="hiking-img"
-														alt="Hiking"
-													/>
-												</div>
-												<div className="grid-link__title">
-													<h3 className="wrap-text-name">
-														{category.category}
-													</h3>
-												</div>
-											</>
-										}
-									/>
+									<a href={`/collections/${category.id}`}>
+										<Card
+											hoverable
+											className="card-wrap"
+											style={{ padding: '0' }}
+											cover={
+												<>
+													<div
+														style={{
+															display: 'flex',
+															justifyContent: 'center',
+														}}
+													>
+														<img
+															src={category.image}
+															className="hiking-img"
+															alt="Hiking"
+														/>
+													</div>
+													<div className="grid-link__title">
+														<h3 className="wrap-text-name">
+															{category.category}
+														</h3>
+													</div>
+												</>
+											}
+										/>
+									</a>
 								</Col>
 							))
 						) : (
