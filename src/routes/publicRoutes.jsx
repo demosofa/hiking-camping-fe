@@ -55,13 +55,15 @@ const publicRoutes = [
 			},
 		],
 	},
-<<<<<<< HEAD
+	{
+		path: '/hihi',
+		element: <ProductPage />,
+	},
+
 	{
 		path: 'product/overview',
 		element: <ProductOverview />,
 	},
-=======
->>>>>>> 035cc38 (fix: parallax and router)
 ];
 
 export default publicRoutes;
