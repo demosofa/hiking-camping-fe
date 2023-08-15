@@ -2,6 +2,7 @@ import Footer from '@layout/Footer/Footer';
 import HikingPage from 'pages/Hiking/HikingPage';
 import { ProductPage } from 'pages/ProductPage/ProductPage';
 
+import { ProductOverview } from 'pages/ProductOverview/ProductOverview';
 import { Shop } from 'pages/Shop/Shop';
 
 /**@type {import("react-router-dom").RouteObject[]} */
@@ -24,6 +25,11 @@ const publicRoutes = [
 	{
 		path: '/hihi',
 		element: <ProductPage />,
+	},
+
+	{
+		path: 'product/overview',
+		element: <ProductOverview />,
 	},
 ];
 
