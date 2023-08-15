@@ -1,15 +1,14 @@
 import './Parallax.css';
-export const Parallax = () => {
+export const Parallax = ({ pageTitle }) => {
 	return (
 		<div className="parallax-position">
 			<div className="parallax-relative">
 				<section>
 					<div className="p-one parallax-inner">
-						<h4>Home › Your Shopping Cart</h4>
-						<h2>YOUR SHOPPING CART</h2>
+						<h4>Home › {pageTitle}</h4>
+						<h2>{pageTitle}</h2>
 					</div>
 				</section>
-				<hr />
 			</div>
 		</div>
 	);
