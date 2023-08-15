@@ -1,0 +1,18 @@
+.navbar-container {
+	display: flex;
+	flex-wrap: nowrap;
+	background-color: white;
+}
+
+.navbar-container > .container-right .anticon {
+	color: black;
+	transition: all 0.4s ease-in-out;
+}
+
+.navbar-container > .container-right > .ant-space-item:hover > .anticon {
+	color: #fac012;
+}
+
+.home-log {
+	flex: 1;
+}

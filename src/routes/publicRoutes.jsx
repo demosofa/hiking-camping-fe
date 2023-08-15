@@ -1,4 +1,4 @@
-import Footer from '@layout/Footer/Footer';
+import { PublicLayout } from '@layout/PublicLayout';
 import HikingPage from 'pages/Hiking/HikingPage';
 import { ProductPage } from 'pages/ProductPage/ProductPage';
 
@@ -9,32 +9,35 @@ import { CartItem } from 'pages/CartItem/CartItem';
 /**@type {import("react-router-dom").RouteObject[]} */
 const publicRoutes = [
 	{
-		path: '/hehe',
-		element: <Footer />,
-	},
+		element: <PublicLayout />,
+		children: [
+			{ path: '/' },
 
-	{
-		path: '/collections',
-		element: <HikingPage />,
-	},
+			{
+				path: '/collections',
+				element: <HikingPage />,
+			},
 
-	{
-		path: '/collection/all',
-		element: <Shop />,
-	},
+			{
+				path: '/collection/all',
+				element: <Shop />,
+			},
 
-	{
-		path: '/hihi',
-		element: <ProductPage />,
-	},
+			{
+				path: '/hihi',
+				element: <ProductPage />,
+			},
 
-	{
-		path: 'product/overview',
-		element: <ProductOverview />,
-	},
-	{
-		path: '/',
-		element: <CartItem />,
+			{
+				path: 'product/overview',
+				element: <ProductOverview />,
+			},
+
+			{
+				path: '/cart',
+				element: <CartItem />,
+			},
+		],
 	},
 ];
 
