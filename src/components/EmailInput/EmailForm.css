@@ -1,0 +1,28 @@
+.email-input {
+	width: 75%;
+	border-radius: 0;
+	font-size: 16px;
+	font-style: italic;
+	min-height: 52px;
+	border: none;
+	float: none !important;
+	margin: 0;
+	color: #000000;
+	background: #f4f4f4;
+	padding: 0 15px;
+}
+
+.email-submit {
+	background: #fac012;
+	color: #4d3737;
+	min-height: 52px;
+	font-size: 18px;
+	border-radius: 0;
+	padding: 0 16px;
+	border: none;
+}
+
+.email-submit:hover {
+	background: #000000;
+	color: #ffffff;
+}
