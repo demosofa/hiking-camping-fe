@@ -15,13 +15,11 @@ export const ProductOverviewImage = ({ products, productload }) => {
 										width: 480,
 										height: 480,
 										src: `http://localhost:3000/${product.variant[0].image}`,
-										crossOrigin: 'anonymous',
 									},
 									largeImage: {
 										src: `http://localhost:3000/${product.variant[0].image}`,
 										width: 800,
 										height: 1000,
-										crossOrigin: 'anonymous',
 									},
 								}}
 							/>
