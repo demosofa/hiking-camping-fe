@@ -1,4 +1,4 @@
-import { Auth } from '@layout/PrivateLayout';
+import { Auth } from '@contexts';
 import { useContext } from 'react';
 
 export function useAuth() {
