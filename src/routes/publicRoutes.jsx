@@ -6,6 +6,7 @@ import { ProductOverview } from 'pages/ProductOverview/ProductOverview';
 import { Shop } from 'pages/Shop/Shop';
 import { CartItem } from 'pages/CartItem/CartItem';
 import { Trekking } from 'pages/Trekking/Trekking';
+import { Register } from '@pages';
 
 /**@type {import("react-router-dom").RouteObject[]} */
 const publicRoutes = [
@@ -13,6 +14,8 @@ const publicRoutes = [
 		element: <PublicLayout />,
 		children: [
 			{ path: '/' },
+
+			{ path: '/register', element: <Register /> },
 
 			{
 				path: '/collections',
