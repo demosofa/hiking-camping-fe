@@ -2,6 +2,8 @@ import {
 	AppstoreFilled,
 	CaretDownOutlined,
 	CaretUpOutlined,
+	HeartOutlined,
+	ShoppingCartOutlined,
 	UnorderedListOutlined,
 } from '@ant-design/icons';
 import { Card, Col, Dropdown, Row, Space } from 'antd';
@@ -9,6 +11,7 @@ import Rating from 'components/Rating/Rating';
 import { useGetProduct } from 'hooks/useGetProduct';
 import './Product.css';
 import { useState } from 'react';
+import { Link } from 'react-router-dom';
 
 export const Product = () => {
 	const items = [
@@ -156,7 +159,7 @@ export const Product = () => {
 								xl={8}
 								className="row-wrap"
 							>
-								<a href={`/product/overview/${product.id}`}>
+								<Link to={`/product/overview/${product.id}`}>
 									<Card
 										hoverable
 										className="card-wrap"
@@ -177,14 +180,22 @@ export const Product = () => {
 														}`}
 														className="product-img"
 														alt="Hiking"
-														crossOrigin="anonymous"
 													/>
+													<div className="hover-icons">
+														<ShoppingCartOutlined
+															className="cart-icon"
+															href=""
+														/>
+														<HeartOutlined className="wishlist-icon" />
+													</div>
 												</div>
 												<div className="grid-link__title">
-													<a className="product-text-name">{product.name}</a>
+													<label className="product-text-name">
+														{product.name}
+													</label>
 													<div className="grid-color">
 														{product.variant.map((variant) => (
-															<div
+															<span
 																key={variant.id}
 																className={`grid-image ${
 																	selectedColors[product.id] === variant.image
@@ -194,10 +205,12 @@ export const Product = () => {
 																style={{
 																	background: `${variant.color.color}`,
 																}}
-																onClick={() =>
-																	handleColorClick(product.id, variant.image)
-																}
-															></div>
+																onClick={(e) => {
+																	e.preventDefault();
+																	e.stopPropagation();
+																	handleColorClick(product.id, variant.image);
+																}}
+															></span>
 														))}
 													</div>
 												</div>
@@ -211,7 +224,7 @@ export const Product = () => {
 											</>
 										}
 									/>
-								</a>
+								</Link>
 							</Col>
 						) : null
 					)
