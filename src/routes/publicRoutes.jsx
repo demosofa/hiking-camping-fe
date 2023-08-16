@@ -31,7 +31,7 @@ const publicRoutes = [
 			},
 
 			{
-				path: 'product/overview',
+				path: 'product/overview/:id',
 				element: <ProductOverview />,
 			},
 

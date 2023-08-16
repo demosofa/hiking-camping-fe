@@ -1,0 +1,35 @@
+.grid-view {
+	width: 40px;
+	height: 40px;
+	padding: 0;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-left: 15px;
+	background: #fac012;
+	color: #4d3737;
+}
+
+.view-icon svg {
+	width: 17px;
+	height: 16px;
+}
+
+.list-view {
+	width: 40px;
+	height: 40px;
+	padding: 0;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background: #4d3737;
+	color: #fff;
+}
+
+.grid-view:hover {
+	color: white;
+}
+
+.list-view:hover {
+	color: black;
+}
