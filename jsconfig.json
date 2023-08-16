@@ -8,12 +8,13 @@
 		"paths": {
 			"@components": ["./components/index"],
 			"@constants": ["./constants/index"],
+			"@contexts": ["./contexts/index"],
+			"@services": ["./services/index"],
 			"@reducers/*": ["./reducers/*"],
 			"@layout/*": ["./layout/*"],
 			"@hooks": ["./hooks/index"],
 			"@utils": ["./utils/index"],
-			"@pages": ["./pages/index"],
-			"@services": ["./services/index"]
+			"@pages": ["./pages/index"]
 		}
 	}
 }
