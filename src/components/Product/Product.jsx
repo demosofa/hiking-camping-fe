@@ -7,7 +7,6 @@ import {
 import { Card, Col, Dropdown, Row, Space } from 'antd';
 import Rating from 'components/Rating/Rating';
 import { useGetProduct } from 'hooks/useGetProduct';
-import { Link } from 'react-router-dom';
 import './Product.css';
 import { useState } from 'react';
 
@@ -73,6 +72,13 @@ export const Product = () => {
 	};
 
 	const { data: products, isLoading: loadingProduct } = useGetProduct();
+	const [selectedColors, setSelectedColors] = useState({});
+	const handleColorClick = (productId, image) => {
+		setSelectedColors((prevSelectedColors) => ({
+			...prevSelectedColors,
+			[productId]: image,
+		}));
+	};
 
 	return (
 		<>
@@ -165,7 +171,10 @@ export const Product = () => {
 													}}
 												>
 													<img
-														src={`http://localhost:3000/${product.variant[0].image}`}
+														src={`http://localhost:3000/${
+															selectedColors[product.id] ||
+															product.variant[0].image
+														}`}
 														className="product-img"
 														alt="Hiking"
 														crossOrigin="anonymous"
@@ -173,17 +182,24 @@ export const Product = () => {
 												</div>
 												<div className="grid-link__title">
 													<a className="product-text-name">{product.name}</a>
-													<Link className="grid-color">
+													<div className="grid-color">
 														{product.variant.map((variant) => (
-															<Link
-																key={product.id}
-																className="grid-image"
+															<div
+																key={variant.id}
+																className={`grid-image ${
+																	selectedColors[product.id] === variant.image
+																		? 'selected'
+																		: ''
+																}`}
 																style={{
 																	background: `${variant.color.color}`,
 																}}
-															></Link>
+																onClick={() =>
+																	handleColorClick(product.id, variant.image)
+																}
+															></div>
 														))}
-													</Link>
+													</div>
 												</div>
 
 												<div className="product-price-name">

@@ -5,6 +5,6 @@ export const getProduct = () =>
 	axios.get(API_URL.PRODUCT, {
 		headers: {
 			Authorization:
-				'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImM0ZGI0NTlmLTg3MDctNDllZi1hODU3LTcwYmRhMTQ2ZGUzYSIsImZ1bGxOYW1lIjoiTmhhbiBOZ28iLCJyb2xlIjoiYWRtaW4iLCJpYXQiOjE2OTIxNTQ5MDB9.HHxL2DUiMO6WqN_gMUd-OBgaOOkrkSastLezOCqmeLY',
+				'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImRmOWRlMWNiLTcyOGEtNGI0OS04ZjAzLWJjY2NmNGIxOTA0MCIsImZ1bGxOYW1lIjoibmhhbiBuZ3V5ZW4iLCJyb2xlIjoiYWRtaW4iLCJpYXQiOjE2OTIwNzA4NzN9.dOAjdVq5JrH4GVOWSBUkQ3KuKP2aUTi360BlBqfAFyU',
 		},
 	});
