@@ -66,6 +66,7 @@
 .grid-color {
 	display: flex !important;
 	justify-content: center !important;
+	margin-bottom: 15px;
 }
 
 .grid-image {
@@ -73,6 +74,12 @@
 	height: 20px;
 	margin-right: 5px;
 	margin-bottom: 10px;
+	transition: border 0.3s ease;
+	border: 1px solid #000;
+}
+
+.grid-image:hover {
+	border: 1.5px solid #f9c971;
 }
 
 .product-text-name {
@@ -83,7 +90,7 @@
 	display: inline-block;
 	width: 100%;
 	margin-top: 22px;
-	margin-bottom: 20px;
+	margin-bottom: 15px;
 	text-align: center;
 }
 
@@ -97,9 +104,9 @@
 	margin-bottom: 10px;
 }
 
-.product-rating {
+.product-rating-pro {
 	text-align: center;
-	font-size: 16px;
+	font-size: 12px !important;
 	font-weight: 300;
 	color: #4d3737;
 	margin-top: 10px;
