@@ -3,19 +3,29 @@ import { products } from './products';
 import './ProductOverview.css';
 import { Col, Row } from 'antd';
 import { ProductOverviewImage } from 'components/ProductOverviewImage/ProductOverviewImage';
+import { useGetProductDetail } from 'hooks/useGetProductDetail';
 
 export const ProductOverview = () => {
+	const { data: productDetail, isLoading: loadingProductDetail } =
+		useGetProductDetail();
 	return (
 		<div className="product-overview">
 			<Row justify={'center'} className="product-overview_layout">
 				<Col span={1}></Col>
 				<Col span={10}>
-					<ProductOverviewImage />
+					<ProductOverviewImage
+						products={productDetail}
+						productload={loadingProductDetail}
+					/>
 				</Col>
 				<Col span={1}></Col>
 				<Col span={11}>
 					{products.map((product) => (
-						<ProductDetail key={product.id} product={product} />
+						<ProductDetail
+							key={product.id}
+							products={productDetail}
+							productload={loadingProductDetail}
+						/>
 					))}
 				</Col>
 				<Col span={1}></Col>
