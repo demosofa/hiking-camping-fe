@@ -5,6 +5,8 @@ import { Featured } from 'components/Featured/Featured';
 import ShopCarousel from 'components/ShopCarousel/ShopCarousel';
 import BootList from './../../components/BootList/BootList';
 import './Home.css';
+import { HeadHomeSlide } from 'components/HeadHomeSlide/HeadHomeSlide';
+import { TentList } from 'components/TentList/TentList';
 
 export const Home = () => {
 	return (
@@ -72,8 +74,14 @@ export const Home = () => {
 						<br />
 						<br />
 					</Col>
-					<Col span={17}>abc</Col>
 					<Col span={1}></Col>
+					<Col span={14}>
+						<HeadHomeSlide />
+						<br />
+						<br />
+						<TentList />
+					</Col>
+					<Col span={4}></Col>
 				</Row>
 			</div>
 		</>
