@@ -46,10 +46,6 @@ const publicRoutes = [
 			},
 		],
 	},
-	{
-		path: '/trekking',
-		element: <Trekking />,
-	},
 
 	{
 		path: '/hihi',
