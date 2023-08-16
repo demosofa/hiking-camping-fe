@@ -1,0 +1,63 @@
+.register-container {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 10px;
+	max-width: 500px;
+	margin: 0 auto;
+}
+
+.register-container .error-show {
+	color: #d02e2e;
+	background-color: #fff6f6;
+	border: 1px solid #d02e2e;
+	width: 100%;
+	margin-bottom: 24px;
+}
+
+.register-container ul {
+	list-style: disc outside;
+	margin: 0;
+	margin-left: 40px;
+	padding: 6px 12px;
+	border-radius: 2px;
+	border: 1px solid transparent;
+}
+
+.register-container form {
+	background-color: white;
+	width: 100%;
+}
+
+.register-container .ant-input,
+.register-container .ant-input-password {
+	border-radius: 2px;
+	padding: 14px 10px;
+}
+
+.register-container .register-btn {
+	border: none;
+	border-radius: 2px;
+	padding: 14px 10px;
+	height: fit-content;
+	background-color: #fac012;
+	text-transform: uppercase;
+	font-weight: 600;
+}
+
+.register-container .register-btn:hover {
+	background-color: #4d3737;
+	color: #fff !important;
+	letter-spacing: 1px;
+	font-size: 16px;
+}
+
+.register-container > a {
+	text-decoration: underline;
+	margin-bottom: 60px;
+	transition: all 0.4s ease-in-out;
+}
+
+.register-container > a:hover {
+	color: #fac012;
+}
