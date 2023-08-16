@@ -6,7 +6,6 @@ import { ProductOverview } from 'pages/ProductOverview/ProductOverview';
 import { Shop } from 'pages/Shop/Shop';
 import { CartItem } from 'pages/CartItem/CartItem';
 import { Trekking } from 'pages/Trekking/Trekking';
-import { Product } from 'components/Product/Product';
 
 /**@type {import("react-router-dom").RouteObject[]} */
 const publicRoutes = [
@@ -45,61 +44,6 @@ const publicRoutes = [
 				element: <Trekking />,
 			},
 		],
-	},
-
-	{
-		path: '/hihi',
-		element: <ProductPage />,
-	},
-
-	{
-		path: 'product/overview',
-		element: <ProductOverview />,
-	},
-
-	{
-		path: '/',
-		element: <CartItem />,
-	},
-
-	{
-		path: '/product',
-		element: <Product />,
-	},
-
-	{
-		path: '/hihi',
-		element: <ProductPage />,
-	},
-
-	{
-		path: 'product/overview',
-		element: <ProductOverview />,
-	},
-
-	{
-		path: '/',
-		element: <CartItem />,
-	},
-
-	{
-		path: '/product',
-		element: <Product />,
-	},
-
-	{
-		path: '/hihi',
-		element: <ProductPage />,
-	},
-
-	{
-		path: '/collection/all',
-		element: <Shop />,
-	},
-
-	{
-		path: '/collection/all',
-		element: <Shop />,
 	},
 ];
 
