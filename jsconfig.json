@@ -14,7 +14,8 @@
 			"@layout/*": ["./layout/*"],
 			"@hooks": ["./hooks/index"],
 			"@utils": ["./utils/index"],
-			"@pages": ["./pages/index"]
+			"@pages": ["./pages/index"],
+			"@services": ["./services/index"]
 		}
 	}
 }
