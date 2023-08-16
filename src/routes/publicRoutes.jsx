@@ -5,6 +5,7 @@ import { ProductPage } from 'pages/ProductPage/ProductPage';
 import { ProductOverview } from 'pages/ProductOverview/ProductOverview';
 import { Shop } from 'pages/Shop/Shop';
 import { CartItem } from 'pages/CartItem/CartItem';
+import { Trekking } from 'pages/Trekking/Trekking';
 
 /**@type {import("react-router-dom").RouteObject[]} */
 const publicRoutes = [
@@ -38,6 +39,10 @@ const publicRoutes = [
 				element: <CartItem />,
 			},
 		],
+	},
+	{
+		path: '/trekking',
+		element: <Trekking />,
 	},
 ];
 
