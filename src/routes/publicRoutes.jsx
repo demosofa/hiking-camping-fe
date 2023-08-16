@@ -38,6 +38,11 @@ const publicRoutes = [
 				path: '/cart',
 				element: <CartItem />,
 			},
+
+			{
+				path: '/trekking',
+				element: <Trekking />,
+			},
 		],
 	},
 	{
