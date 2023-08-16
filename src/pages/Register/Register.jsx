@@ -1,20 +1,21 @@
 import { Button, Form, Input } from 'antd';
 import { Link, useNavigate } from 'react-router-dom';
 import { register } from '@services';
-import { setStorage } from '@utils';
 import { useState } from 'react';
 import { Parallax } from 'components/Parallax';
 import './register.css';
+import { useAuth } from '@hooks';
 
 export function Register() {
 	const [form] = Form.useForm();
 	const navigate = useNavigate();
 
+	const setAuth = useAuth();
 	const [errors, setErrors] = useState([]);
 
 	const onFinish = async (values) => {
 		const { data } = await register(values);
-		setStorage('token', data);
+		setAuth(data);
 		navigate('/');
 	};
 
