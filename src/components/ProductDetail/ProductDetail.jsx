@@ -30,12 +30,14 @@ const ProductDetail = ({ products, productload }) => {
 				products.map((product) =>
 					product.variant ? (
 						<>
-							<Row gutter={[16, 16]}>
+							<Row gutter={[16, 16]} key={products.id}>
 								<Col span={12}>
 									<h2>{product.name}</h2>
 								</Col>
 								<Col span={12} style={{ textAlign: 'right' }}>
-									<p>Price: ${product.variant[0].price}</p>
+									{product.variant.map((variant) => (
+										<p key={products.id}>Price: ${variant.price}</p>
+									))}
 								</Col>
 							</Row>
 
