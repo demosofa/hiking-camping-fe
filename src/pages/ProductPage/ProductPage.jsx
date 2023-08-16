@@ -11,6 +11,7 @@ import BootList from 'components/BootList/BootList';
 import ShopCarousel from 'components/ShopCarousel/ShopCarousel';
 import { useGetProduct } from 'hooks/useGetProduct';
 import Rating from 'components/Rating/Rating';
+import { Link } from 'react-router-dom';
 
 export const ProductPage = () => {
 	const items = [
@@ -210,24 +211,24 @@ export const ProductPage = () => {
 																<a className="product-text-name">
 																	{product.name}
 																</a>
-																<div className="grid-color">
+																<Link className="grid-color">
 																	{product.variant.map((variant) => (
-																		<div
+																		<Link
 																			key={product.id}
 																			className="grid-image"
 																			style={{
 																				background: `${variant.color.color}`,
 																			}}
-																		></div>
+																		></Link>
 																	))}
-																</div>
+																</Link>
 															</div>
 
 															<div className="product-price-name">
 																<span className="">
 																	${product.variant[0].price}
 																</span>
-																<div className="product-rating">
+																<div className="product-rating-pro">
 																	<Rating rating={product.review[0]?.rating} />
 																</div>
 															</div>
@@ -243,7 +244,7 @@ export const ProductPage = () => {
 							)}
 							{/* {
 								loadingProduct ? null : products && products.length > 0 ? 
-								(products.map()):(<p>hehehe</p>
+								(products.map((product) => product.variant ? (<Col></Col>): null)):(<p>hehehe</p>
 								)
 							} */}
 						</Row>

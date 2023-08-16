@@ -21,6 +21,10 @@
 	transition: color 0.3s ease;
 }
 
+.category-item {
+	margin-bottom: 20px;
+}
+
 .category-header:hover,
 .category-header:hover .category-name-link {
 	color: #f9c971;

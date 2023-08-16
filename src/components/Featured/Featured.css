@@ -1,0 +1,58 @@
+.blog-image-container {
+	position: relative;
+	border-left: 1px solid #e4e4e4;
+	border-bottom: 1px solid #e4e4e4;
+}
+
+.blog-image {
+	width: 100%;
+	height: auto;
+}
+
+.carousel-container {
+	position: relative;
+}
+
+.carousel-arrow {
+	float: left;
+	position: absolute;
+	top: 15%;
+	cursor: pointer;
+	font-size: 34px;
+	text-align: center;
+	width: 50px;
+	height: 50px;
+	line-height: 50px;
+	background: rgba(255, 255, 255, 0.7);
+}
+
+.carousel-arrow:hover {
+	background-color: rgba(255, 255, 255, 0.8);
+	color: #000;
+}
+
+.carousel-arrow.prev {
+	left: 0;
+}
+
+.carousel-arrow.next {
+	right: 0;
+}
+
+.blog-desc {
+	margin: 10px;
+	text-align: center;
+	color: #000;
+}
+
+.anticon.anticon-user {
+	color: #fac012;
+}
+
+.blog-detail h4 {
+	font-size: 20px;
+	margin-bottom: 15px;
+	text-transform: uppercase;
+	text-align: center;
+	font-weight: normal;
+}

@@ -57,6 +57,7 @@ export const Category = () => {
 		<div>
 			{categories.map((category, index) => (
 				<CategoryItem
+					className="category-item"
 					key={index}
 					name={category.name}
 					subCategories={category.subCategories}

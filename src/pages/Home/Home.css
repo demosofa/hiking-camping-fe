@@ -1,0 +1,15 @@
+.home-layout {
+	background-color: white;
+	box-shadow: 0px 0px 12px 2px rgba(0, 0, 0, 0.1);
+	color: black;
+	width: 100%;
+	padding-top: 60px;
+}
+
+.home {
+	padding: 60px;
+}
+
+.home_left-col {
+	padding-left: 30px;
+}
