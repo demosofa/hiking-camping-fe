@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { Card, Col, Row } from 'antd';
-import Footer from '@layout/Footer/Footer';
+import './ListOneCategory.css';
 import axios from 'axios';
 import Rating from 'components/Rating/Rating';
 
@@ -30,66 +30,61 @@ export default function ListOneCategory() {
 
 	return (
 		<>
-			<div className="wrap-container">
-				<div className="wrap-container-color">
-					<Row justify="center">
-						{category.product.map((product) => (
-							<Col
-								key={product.id}
-								xs={24}
-								md={11}
-								lg={7}
-								xl={5}
-								className="row-wrap"
-							>
-								<Card
-									hoverable
-									className="card-wrap"
-									style={{ padding: '0' }}
-									cover={
-										<>
-											<div
-												style={{
-													display: 'flex',
-													justifyContent: 'center',
-												}}
-											>
-												<img
-													src={`http://localhost:3000/${product.variant[0].image}`}
-													className="hiking-img"
-													alt="Hiking"
-												/>
-											</div>
-											<div className="grid-link__title">
-												<h3 className="wrap-text-name">{product.name}</h3>
-											</div>
-											<div className="grid-color">
-												{product.variant.map((variant) => (
-													<span
-														key={variant.id}
-														className="grid-image"
-														style={{
-															background: `${variant.color.color}`,
-														}}
-													></span>
-												))}
-											</div>
+			<Row justify="center">
+				{category.product.map((product) => (
+					<Col
+						key={product.id}
+						xs={24}
+						md={11}
+						lg={7}
+						xl={5}
+						className="row-wrap"
+					>
+						<Card
+							hoverable
+							className="card-category-product"
+							style={{ padding: '0' }}
+							cover={
+								<>
+									<div
+										style={{
+											display: 'flex',
+											justifyContent: 'center',
+										}}
+									>
+										<img
+											src={`http://localhost:3000/${product.variant[0].image}`}
+											className="hiking-img-product"
+											alt="Hiking"
+										/>
+									</div>
+									<div className="grid-link__title">
+										<h3 className="wrap-text-name">{product.name}</h3>
+										<div className="grid-color-category">
+											{product.variant.map((variant) => (
+												<span
+													key={variant.id}
+													className="grid-image"
+													style={{
+														background: `${variant.color.color}`,
+													}}
+												></span>
+											))}
+										</div>
+									</div>
 
-											<div className="product-price-name">
-												<span className="">${product.variant[0].price}</span>
-												<div className="product-rating-pro">
-													<Rating rating={product.review[0]?.rating} />
-												</div>
-											</div>
-										</>
-									}
-								/>
-							</Col>
-						))}
-					</Row>
-				</div>
-			</div>
-			<Footer />
+									<div className="product-price-name">
+										<span className="">${product.variant[0].price}</span>
+										<div className="product-rating-pro">
+											<Rating rating={product.review[0]?.rating} />
+										</div>
+									</div>
+								</>
+							}
+						/>
+					</Col>
+				))}
+			</Row>
 		</>
 	);
 }
