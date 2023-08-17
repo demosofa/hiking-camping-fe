@@ -5,9 +5,6 @@ import { useEffect, useState } from 'react';
 import axios from 'axios';
 import { Link } from 'react-router-dom';
 
-axios.defaults.headers['Authorization'] =
-	'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6Ijk2ZDBkMWVkLTY2ZGItNDFjMi05MmE0LTdlNjE0ZmYyYmQ0ZSIsImZ1bGxOYW1lIjoibmd1eWVuIHZhbiB0aMOpbmcgYsO5bG9uZyIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTY5MjE2MTEzOX0.8IdfswpYahC7X4BcU93ZobmLtDkecIgh2ShHJhLWrl4';
-
 export const Wishlist = () => {
 	const [wishlist, setWishlist] = useState([]);
 	// const [deleted, setDeleted] = useState([]);
