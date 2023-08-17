@@ -8,6 +8,7 @@ import PriceList from 'components/PriceList/PriceList';
 import BootList from 'components/BootList/BootList';
 import ShopCarousel from 'components/ShopCarousel/ShopCarousel';
 import { Parallax } from 'components/Parallax';
+import { Product } from 'components/Product/Product';
 
 export const Trekking = () => {
 	return (
@@ -70,7 +71,10 @@ export const Trekking = () => {
 								<ShopCarousel />
 							</div>
 						</Col>
-						<Col span={17}>abc</Col>
+						<Col span={1}></Col>
+						<Col span={16}>
+							<Product />
+						</Col>
 						<Col span={1}></Col>
 					</Row>
 				</div>
