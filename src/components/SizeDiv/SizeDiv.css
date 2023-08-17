@@ -23,3 +23,8 @@
 	color: #ffc107;
 	cursor: pointer;
 }
+
+.selected {
+	border: 2px solid #ff003c;
+	box-shadow: 0 0 4px rgba(255, 0, 34, 0.5);
+}
