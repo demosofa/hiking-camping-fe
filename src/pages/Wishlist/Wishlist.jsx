@@ -1,9 +1,9 @@
-import { Parallax } from 'components/Parallax';
 import './Wishlist.css';
 import { Button, Space, Table } from 'antd';
 import { useEffect, useState } from 'react';
 import axios from 'axios';
 import { Link } from 'react-router-dom';
+import { Parallax } from 'components/Parallax/Parallax';
 
 export const Wishlist = () => {
 	const [wishlist, setWishlist] = useState([]);

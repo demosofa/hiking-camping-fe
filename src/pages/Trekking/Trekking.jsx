@@ -7,7 +7,7 @@ import BrandList from 'components/BrandList/BrandList';
 import PriceList from 'components/PriceList/PriceList';
 import BootList from 'components/BootList/BootList';
 import ShopCarousel from 'components/ShopCarousel/ShopCarousel';
-import { Parallax } from 'components/Parallax';
+import { Parallax } from 'components/Parallax/Parallax';
 import { Product } from 'components/Product/Product';
 
 export const Trekking = () => {

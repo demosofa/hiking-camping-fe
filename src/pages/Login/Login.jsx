@@ -2,7 +2,7 @@ import { Button, Form, Input } from 'antd';
 import { Link, useNavigate } from 'react-router-dom';
 import { login } from '@services';
 import { useState } from 'react';
-import { Parallax } from 'components/Parallax';
+import { Parallax } from 'components/Parallax/Parallax';
 import { useAuth } from '@hooks';
 import './login.css';
 

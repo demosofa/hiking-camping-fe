@@ -3,7 +3,7 @@ import BootList from 'components/BootList/BootList';
 import BrandList from 'components/BrandList/BrandList';
 import Category from 'components/Category/Category';
 import ColorDiv from 'components/ColorDiv/ColorDiv';
-import { Parallax } from 'components/Parallax';
+import { Parallax } from 'components/Parallax/Parallax';
 import PriceList from 'components/PriceList/PriceList';
 import { Product } from 'components/Product/Product';
 import ShopCarousel from 'components/ShopCarousel/ShopCarousel';
