@@ -4,22 +4,22 @@ import { useMemo, useState } from 'react';
 import './ProductOverview.css';
 import ProductDetail from 'components/ProductDetail/ProductDetail';
 import { ProductOverviewImage } from 'components/ProductOverviewImage/ProductOverviewImage';
+import { useParams } from 'react-router-dom';
 
 export const ProductOverview = () => {
+	const { id } = useParams();
 	const { data: productDetail, isLoading: loadingProductDetail } =
-		useGetProductDetail();
+		useGetProductDetail(id);
 
 	const [selectedColor, setSelectedColor] = useState('');
 	const [selectedSize, setSelectedSize] = useState(null);
 
-	console.log(selectedColor, selectedSize);
-
 	const selectedVariant = useMemo(() => {
 		if (loadingProductDetail) return null;
-		let variant = productDetail.variant.find((item) => {
+		console.log(productDetail);
+		let variant = productDetail?.variant?.find((item) => {
 			return item.color.id === selectedColor && item.size.id === selectedSize;
 		});
-		console.log(variant);
 		if (!variant) variant = productDetail.variant[0];
 		return variant;
 	}, [selectedColor, selectedSize, loadingProductDetail, productDetail]);
@@ -48,6 +48,7 @@ export const ProductOverview = () => {
 						selectedVariant={selectedVariant}
 						onColorChange={handleColorChange}
 						onSizeChange={handleSizeChange}
+						image={selectedVariant.image}
 					/>
 				</Col>
 			</Row>

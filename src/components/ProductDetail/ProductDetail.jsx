@@ -1,4 +1,4 @@
-import { Button, Col, Input, Row } from 'antd';
+import { Button, Col, Image, Input, Modal, Row } from 'antd';
 import Rating from 'components/Rating/Rating';
 import { SizeCard } from 'components/SizeDiv/SizeDiv';
 import { useMemo, useState } from 'react';
@@ -11,8 +11,20 @@ const ProductDetail = ({
 	selectedVariant,
 	onColorChange,
 	onSizeChange,
+	image,
 }) => {
 	const [quantity, setQuantity] = useState(1);
+
+	const [isModalOpen, setIsModalOpen] = useState(false);
+	const showModal = () => {
+		setIsModalOpen(true);
+	};
+	const handleOk = () => {
+		setIsModalOpen(false);
+	};
+	const handleCancel = () => {
+		setIsModalOpen(false);
+	};
 
 	useMemo(() => {
 		if (quantity > selectedVariant.stock) setQuantity(selectedVariant.stock);
@@ -49,15 +61,24 @@ const ProductDetail = ({
 	}, [product]);
 
 	const handleAddToCart = () => {
-		const { price, name, id, image } = selectedVariant;
-		axios.post(API_URL.CART_ITEM),
-			{
-				quantity,
-				itemPrice: price,
-				nameCart: name,
-				variantId: id,
-				image,
-			};
+		const { price, id, image } = selectedVariant;
+		const cartItemData = {
+			quantity,
+			itemPrice: price,
+			nameCart: product.name,
+			variantId: id,
+			image,
+			totalPrice: quantity * price,
+		};
+
+		axios
+			.post(API_URL.CART_ITEM, cartItemData)
+			.then((response) => {
+				console.log('Item added to cart:', response.data);
+			})
+			.catch((error) => {
+				console.error('Error adding item to cart:', error);
+			});
 	};
 
 	return (
@@ -141,12 +162,33 @@ const ProductDetail = ({
 				</p>
 			</div>
 			<div className="action-btn">
-				<Button onClick={handleAddToCart()} className="btn-handle">
+				<Button
+					onClick={() => {
+						handleAddToCart();
+						showModal();
+					}}
+					className="btn-handle"
+				>
 					ADD TO CART
 				</Button>
+
 				<Button className="btn-handle">BUY IT NOW</Button>
 				<Button className="btn-handle">VIEW WISHLIST</Button>
 			</div>
+			<Modal
+				title="ADDED TO CART"
+				open={isModalOpen}
+				onOk={handleOk}
+				onCancel={handleCancel}
+			>
+				<Row>
+					<Image width={120} src={`http://localhost:3000/${image}`} />
+					<Col>
+						<p>{product.name}</p>
+						<Button href="/cart">View Cart</Button>
+					</Col>
+				</Row>
+			</Modal>
 		</div>
 	);
 };
