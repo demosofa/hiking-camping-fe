@@ -13,3 +13,24 @@
 .home_left-col {
 	padding-left: 30px;
 }
+
+.tenlist-bg {
+	background-color: #fac012;
+	height: 64px;
+	display: flex;
+	align-items: center;
+}
+.tenlist-title {
+	margin-left: 20px;
+	font-size: 24px;
+}
+
+.collections {
+	display: flex;
+	justify-content: space-between;
+}
+
+.footwear-shoes_image {
+	display: flex;
+	justify-content: center;
+}

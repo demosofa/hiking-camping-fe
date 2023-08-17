@@ -7,13 +7,14 @@ import { Shop } from 'pages/Shop/Shop';
 import { CartItem } from 'pages/CartItem/CartItem';
 import Product from 'components/Product/Product';
 import { Trekking } from 'pages/Trekking/Trekking';
+import { Home } from 'pages/Home/Home';
 
 /**@type {import("react-router-dom").RouteObject[]} */
 const publicRoutes = [
 	{
 		element: <PublicLayout />,
 		children: [
-			{ path: '/' },
+			{ path: '/', element: <Home /> },
 
 			{
 				path: '/collections',
