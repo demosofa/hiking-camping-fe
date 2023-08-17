@@ -80,8 +80,19 @@ export const CartItem = () => {
 			title: '___',
 			dataIndex: 'image',
 			key: 'image',
-			render: (url) => (
-				<img src={url} alt="User" style={{ maxWidth: '100px' }} />
+			render: (urls) => (
+				<span>
+					{urls.map((url) => (
+						<span key={url.id}>
+							<img
+								style={{ maxWidth: 200 }}
+								src={'http://localhost:3000/' + url.image}
+								crossOrigin="anonymous"
+							/>
+							<br />
+						</span>
+					))}
+				</span>
 			),
 		},
 		{
