@@ -1,21 +1,20 @@
 import { Col, Row } from 'antd';
-import BootList from 'components/BootList/BootList';
-import BrandList from 'components/BrandList/BrandList';
 import Category from 'components/Category/Category';
 import ColorDiv from 'components/ColorDiv/ColorDiv';
-import { Parallax } from 'components/Parallax';
-import PriceList from 'components/PriceList/PriceList';
-import { Product } from 'components/Product/Product';
-import ShopCarousel from 'components/ShopCarousel/ShopCarousel';
 import SizeDiv from 'components/SizeDiv/SizeDiv';
-import './Shop.css';
+import './Trekking.css';
+import BrandList from 'components/BrandList/BrandList';
+import PriceList from 'components/PriceList/PriceList';
+import BootList from 'components/BootList/BootList';
+import ShopCarousel from 'components/ShopCarousel/ShopCarousel';
+import { Parallax } from 'components/Parallax';
 
-export const Shop = () => {
+export const Trekking = () => {
 	return (
 		<>
 			<div className="shop">
 				<div className="shop-layout">
-					<Parallax pageTitle="Collections" />
+					<Parallax pageTitle={'Trekking'} />
 					<Row justify={'center'}>
 						<Col span={1}></Col>
 						<Col className="shop_left-col" span={5}>
@@ -71,10 +70,7 @@ export const Shop = () => {
 								<ShopCarousel />
 							</div>
 						</Col>
-						<Col span={1}></Col>
-						<Col span={16}>
-							<Product />
-						</Col>
+						<Col span={17}>abc</Col>
 						<Col span={1}></Col>
 					</Row>
 				</div>
