@@ -12,7 +12,8 @@ import { useGetProduct } from 'hooks/useGetProduct';
 import './Product.css';
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
-
+import { API_URL } from 'constants/url';
+import axios from 'axios';
 export const Product = () => {
 	const items = [
 		{
@@ -83,6 +84,29 @@ export const Product = () => {
 		}));
 	};
 
+	const addToCart = async (productId) => {
+		const product = products.find((p) => p.id === productId);
+		const cartItemData = {
+			productId,
+			quantity: 1,
+			itemPrice: product.variant[0].price,
+			image: product.variant[0].image,
+			nameCart: product.name,
+			totalPrice: product.variant[0].price,
+		};
+
+		try {
+			const addToCartResponse = await axios.post(
+				API_URL.CART_ITEM,
+				cartItemData
+			);
+			console.log('Item added to cart:', addToCartResponse.data);
+		} catch (error) {
+			console.error('Error adding item to cart:', error);
+		}
+	};
+
+	// ...
 	return (
 		<>
 			<Row className="dropdown" align={'middle'}>
@@ -185,6 +209,11 @@ export const Product = () => {
 														<ShoppingCartOutlined
 															className="cart-icon"
 															href=""
+															onClick={(e) => {
+																e.preventDefault();
+																e.stopPropagation();
+																addToCart(product.id);
+															}}
 														/>
 														<HeartOutlined className="wishlist-icon" />
 													</div>
