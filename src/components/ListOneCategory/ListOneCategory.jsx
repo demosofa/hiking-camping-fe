@@ -6,7 +6,7 @@ import Rating from 'components/Rating/Rating';
 
 export default function ListOneCategory() {
 	const [category, setCategory] = useState(null);
-	const categoryId = '826b070f-c612-40ea-9905-3bf48b520407'; // Thay 'your_category_id' bằng ID danh mục mong muốn
+	const categoryId = '541a3995-a8bf-40f0-a628-b505c6cf2e98'; // Thay 'your_category_id' bằng ID danh mục mong muốn
 
 	useEffect(() => {
 		const fetchData = async () => {
