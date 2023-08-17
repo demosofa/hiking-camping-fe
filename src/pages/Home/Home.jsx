@@ -2,18 +2,18 @@ import { Button, Col, Row } from 'antd';
 import Category from 'components/Category/Category';
 import { EmailForm } from 'components/EmailInput/EmailForm';
 import { Featured } from 'components/Featured/Featured';
+import { HeadHomeSlide } from 'components/HeadHomeSlide/HeadHomeSlide';
 import ShopCarousel from 'components/ShopCarousel/ShopCarousel';
 import BootList from './../../components/BootList/BootList';
 import './Home.css';
-import { HeadHomeSlide } from 'components/HeadHomeSlide/HeadHomeSlide';
-import { TentList } from 'components/TentList/TentList';
+import { PickGradientProducts } from 'components/PickGradientProducts/PickGradientProducts';
+import { Contact } from 'components/Contact/Contact';
 
 export const Home = () => {
 	return (
 		<>
 			<div className="home">
 				<Row justify={'center'} className="home-layout">
-					<Col span={1}></Col>
 					<Col className="home_left-col" span={5}>
 						<div className="home-categories">
 							<span className="home_category-title">CATEGORY</span>
@@ -75,13 +75,60 @@ export const Home = () => {
 						<br />
 					</Col>
 					<Col span={1}></Col>
-					<Col span={14}>
+					<Col span={16}>
 						<HeadHomeSlide />
 						<br />
 						<br />
-						<TentList />
+						<div className="tenlist-bg">
+							<p className="tenlist-title">NEW ARRIVALS</p>
+						</div>
+						{/* <TentList /> */}
+
+						<div className="collections">
+							<a href="/collections">
+								<img
+									src="//hiking-camping-demo.myshopify.com/cdn/shop/files/banner-1_500x500.jpg?v=1613773234"
+									alt=""
+								/>
+							</a>
+
+							<a href="/collections/new-arrivals">
+								<img
+									src="//hiking-camping-demo.myshopify.com/cdn/shop/files/banner-2_500x500.jpg?v=1613773234"
+									alt=""
+								/>
+							</a>
+						</div>
+
+						<br />
+						<br />
+						<br />
+						<div>
+							<PickGradientProducts />
+						</div>
+
+						<div>
+							<a
+								href="/products/footwear-shoes"
+								className="footwear-shoes_image"
+							>
+								<img
+									src="//hiking-camping-demo.myshopify.com/cdn/shop/files/banner-3_6a2faa66-5540-455a-9d20-81231f3ead68_1920x1920.jpg?v=1613773234"
+									alt=""
+								/>
+							</a>
+						</div>
+
+						<br />
+						<br />
+						<div className="tenlist-bg">
+							<p className="tenlist-title">BEST SELLING</p>
+						</div>
+
+						<Contact />
 					</Col>
-					<Col span={4}></Col>
+
+					<Col span={2}></Col>
 				</Row>
 			</div>
 		</>
