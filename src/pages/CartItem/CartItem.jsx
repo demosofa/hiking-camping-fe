@@ -1,6 +1,6 @@
-import { Parallax } from 'components/Parallax';
+import { Parallax } from 'components/Parallax/Parallax';
 import './CartItem.css';
-import { Button, Space, Table } from 'antd';
+import { Button, Space, Table, message } from 'antd';
 import {
 	DeleteFilled,
 	PlusSquareFilled,
@@ -20,7 +20,7 @@ export const CartItem = () => {
 				setCart(response.data);
 			})
 			.catch((error) => {
-				console.log('Error fetching cart data:', error);
+				message.error(error);
 			});
 	}, []);
 
@@ -35,8 +35,10 @@ export const CartItem = () => {
 			const cloned = clone(prev);
 			const targetIdx = cloned.findIndex((item) => item.id == id);
 			const target = cloned[targetIdx];
-			target.quantity += 1;
-			target.totalPrice += target.itemPrice;
+			if (target.quantity <= target.variant.stock - 1) {
+				target.quantity += 1;
+				target.totalPrice += target.itemPrice;
+			}
 			return cloned;
 		});
 	};
@@ -46,7 +48,7 @@ export const CartItem = () => {
 			const cloned = clone(prev);
 			const targetIdx = cloned.findIndex((item) => item.id == id);
 			const target = cloned[targetIdx];
-			if (target.quantity - 1 >= 0) {
+			if (target.quantity >= 1) {
 				target.quantity -= 1;
 				target.totalPrice -= target.itemPrice;
 			}
@@ -64,11 +66,12 @@ export const CartItem = () => {
 		);
 
 		await Promise.all(
-			cart.map(({ id, quantity, totalPrice }) =>
+			cart.map(({ id, quantity, totalPrice, variant }) =>
 				axios
 					.patch(`http://localhost:3000/cart-item/${id}`, {
 						quantity,
 						totalPrice,
+						variantStock: variant.stock,
 					})
 					.then((response) => response.data)
 			)
@@ -80,8 +83,13 @@ export const CartItem = () => {
 			title: '___',
 			dataIndex: 'image',
 			key: 'image',
-			render: (url) => (
-				<img src={url} alt="User" style={{ maxWidth: '100px' }} />
+			render: (image) => (
+				<div>
+					<img
+						style={{ maxWidth: 200 }}
+						src={'http://localhost:3000/' + image}
+					/>
+				</div>
 			),
 		},
 		{
@@ -107,13 +115,13 @@ export const CartItem = () => {
 			key: 'quantity',
 			render: (quantity, record) => (
 				<Space size="middle">
-					<a onClick={() => handleQuantityMinus(record.id)}>
+					<span onClick={() => handleQuantityMinus(record.id)}>
 						<MinusSquareFilled />
-					</a>
+					</span>
 					<p>{quantity}</p>
-					<a onClick={() => handleQuantityPlus(record.id)}>
+					<span onClick={() => handleQuantityPlus(record.id)}>
 						<PlusSquareFilled />
-					</a>
+					</span>
 				</Space>
 			),
 		},

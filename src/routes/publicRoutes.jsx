@@ -55,11 +55,6 @@ const publicRoutes = [
 			},
 		],
 	},
-
-	{
-		path: 'product/overview',
-		element: <ProductOverview />,
-	},
 ];
 
 export default publicRoutes;
