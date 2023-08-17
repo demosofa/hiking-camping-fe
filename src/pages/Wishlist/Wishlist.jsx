@@ -98,9 +98,9 @@ export const Wishlist = () => {
 		{
 			title: '___',
 			key: 'review',
-			render: () => (
+			render: (variants) => (
 				<Space className="action-btn" size="middle">
-					<Link>
+					<Link to={`/product/overview/${variants.id}`}>
 						<Button className="btn-handle">VIEW PRODUCT</Button>
 					</Link>
 				</Space>
