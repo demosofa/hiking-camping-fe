@@ -7,6 +7,7 @@ import { Shop } from 'pages/Shop/Shop';
 import { CartItem } from 'pages/CartItem/CartItem';
 import { Trekking } from 'pages/Trekking/Trekking';
 import { Register, Login } from '@pages';
+import { Wishlist } from 'pages/Wishlist/Wishlist';
 
 /**@type {import("react-router-dom").RouteObject[]} */
 const publicRoutes = [
@@ -47,6 +48,10 @@ const publicRoutes = [
 			{
 				path: '/trekking',
 				element: <Trekking />,
+			},
+			{
+				path: '/wishlist',
+				element: <Wishlist />,
 			},
 		],
 	},
