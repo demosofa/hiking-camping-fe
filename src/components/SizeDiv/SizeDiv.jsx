@@ -1,30 +1,26 @@
 import { Col, Row } from 'antd';
-import './SizeDiv.css'; // Import file CSS để định dạng các thẻ
+import './SizeDiv.css';
 
-const SizeCard = ({ content, size }) => {
-	const cardClassName = `size-card size-card-${size}`;
+export const SizeCard = ({ size, isSelected, ...props }) => {
+	const cardClassName = `size-card size-card-${size} ${
+		isSelected ? 'selected' : ''
+	}`;
 	return (
-		<div className={cardClassName}>
-			<a href="#" className="size-link">
-				{content}
-			</a>
+		<div className={cardClassName} {...props}>
+			{size}
 		</div>
 	);
 };
 
 const SizeDiv = () => {
-	const items = [
-		{ content: 'M', size: 'large' },
-		{ content: 'L', size: 'large' },
-		{ content: 'X', size: 'large' },
-	];
+	const sizes = ['M', 'L', 'X'];
 
 	return (
 		<div className="container">
 			<Row gutter={[16, 16]}>
-				{items.map((item, index) => (
+				{sizes.map((sizeItem, index) => (
 					<Col key={index} span={8}>
-						<SizeCard content={item.content} size={item.size} />
+						<SizeCard size={sizeItem} />
 					</Col>
 				))}
 			</Row>
