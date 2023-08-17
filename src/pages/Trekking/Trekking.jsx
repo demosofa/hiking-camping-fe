@@ -12,7 +12,7 @@ import { Parallax } from 'components/Parallax';
 export const Trekking = () => {
 	return (
 		<>
-			<div className="shop">
+			<div className="shop div-no-padding">
 				<div className="shop-layout">
 					<Parallax pageTitle={'Trekking'} />
 					<Row justify={'center'}>
