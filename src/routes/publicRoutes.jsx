@@ -26,7 +26,7 @@ const publicRoutes = [
 			},
 
 			{
-				path: '/collection/all',
+				path: '/collections/all',
 				element: <Shop />,
 			},
 

@@ -2,6 +2,7 @@ import { Card, Col, Row } from 'antd';
 import './HikingPage.css';
 import Footer from '@layout/Footer/Footer';
 import { useGetCategory } from 'hooks/useGetCategory';
+import { Link } from 'react-router-dom';
 
 export default function SearchContext() {
 	const { data: category, isLoading: loadingCategory } = useGetCategory();
@@ -21,7 +22,7 @@ export default function SearchContext() {
 									xl={5}
 									className="row-wrap"
 								>
-									<a href={`/collections/${category.id}`}>
+									<Link to={`/collections/all`}>
 										<Card
 											hoverable
 											className="card-wrap"
@@ -48,7 +49,7 @@ export default function SearchContext() {
 												</>
 											}
 										/>
-									</a>
+									</Link>
 								</Col>
 							))
 						) : (
