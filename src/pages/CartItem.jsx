@@ -10,6 +10,9 @@ import { useEffect, useState } from 'react';
 import { clone } from '@utils';
 import axios from 'axios';
 
+axios.defaults.headers['Authorization'] =
+	'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6Ijk2ZDBkMWVkLTY2ZGItNDFjMi05MmE0LTdlNjE0ZmYyYmQ0ZSIsImZ1bGxOYW1lIjoibmd1eWVuIHZhbiB0aMOpbmcgYsO5bG9uZyIsInJvbGUiOiJjdXN0b21lciIsImlhdCI6MTY5MjA4MjUxM30.VPUaqdAP247oqb1cFe7nU5ksZlaxLkRv9913GE3MSpo';
+
 export const CartItem = () => {
 	const [cart, setCart] = useState([]);
 	const [deleted, setDeleted] = useState([]);
@@ -149,7 +152,7 @@ export const CartItem = () => {
 	return (
 		<div className="cart_body">
 			<div className="bg-parallax">
-				<Parallax pageTitle={'Your Shopping Cart'} />
+				<Parallax />
 			</div>
 			<div>
 				<ImageTable items={cart} />
