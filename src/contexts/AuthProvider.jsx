@@ -3,12 +3,15 @@ import axios from 'axios';
 import jwtDecode from 'jwt-decode';
 import { getStorage, removeStorage, setStorage } from '@utils';
 
-// eslint-disable-next-line no-unused-vars
-export const Auth = createContext((newToken) => ({
-	id: '',
-	email: '',
-	role: '',
-}));
+export const Auth = createContext({
+	getAuth: () => ({
+		id: '',
+		email: '',
+		role: '',
+	}),
+	// eslint-disable-next-line no-unused-vars
+	setAuth: (newToken) => undefined,
+});
 
 export function AuthProvider({ children }) {
 	const [token, setToken] = useState(getStorage('token'));
@@ -21,24 +24,27 @@ export function AuthProvider({ children }) {
 		delete axios.defaults.headers.common['Authorization'];
 	}
 
-	const getAuth = useCallback(
+	const setAuth = useCallback(
 		(newToken) => {
-			if (!newToken) newToken = token;
-			else {
+			if (newToken) {
 				setStorage('token', newToken);
 				setToken(newToken);
-			}
-
-			try {
-				return jwtDecode(newToken);
-			} catch (error) {
+			} else {
 				removeStorage('token');
 				setToken(null);
-				return null;
 			}
 		},
-		[token]
+		[setToken]
 	);
+
+	const getAuth = useCallback(() => {
+		try {
+			return jwtDecode(token);
+		} catch (error) {
+			setAuth(null);
+			return null;
+		}
+	}, [setAuth, token]);
 
 	useEffect(() => {
 		const interceptor = axios.interceptors.response.use(
@@ -57,5 +63,5 @@ export function AuthProvider({ children }) {
 		return () => axios.interceptors.response.eject(interceptor);
 	}, []);
 
-	return <Auth.Provider value={getAuth}>{children}</Auth.Provider>;
+	return <Auth.Provider value={{ getAuth, setAuth }}>{children}</Auth.Provider>;
 }

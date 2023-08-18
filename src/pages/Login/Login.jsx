@@ -10,7 +10,7 @@ export function Login() {
 	const [form] = Form.useForm();
 	const navigate = useNavigate();
 
-	const setAuth = useAuth();
+	const { setAuth } = useAuth();
 	const [errors, setErrors] = useState([]);
 
 	const onFinish = async (values) => {

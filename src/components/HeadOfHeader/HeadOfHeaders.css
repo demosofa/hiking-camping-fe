@@ -1,0 +1,18 @@
+.head-of-header_cotainer {
+	color: black;
+}
+
+.header-of-header_info {
+	display: flex;
+	justify-content: space-between;
+}
+
+.my-account_button {
+	background: none;
+	border: none;
+}
+
+.my-account_button:hover {
+	border: none;
+	color: #f8ab51 !important;
+}
