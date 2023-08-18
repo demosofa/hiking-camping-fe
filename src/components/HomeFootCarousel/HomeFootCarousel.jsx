@@ -1,4 +1,4 @@
-import { Carousel } from 'antd';
+import { Carousel } from 'antd'; // Đảm bảo bạn đã cài đặt thư viện antd
 
 const imageData = [
 	'//hiking-camping-demo.myshopify.com/cdn/shop/files/client-2_200x200.jpg?v=1613773234',
@@ -10,7 +10,7 @@ const imageData = [
 	'//hiking-camping-demo.myshopify.com/cdn/shop/files/client-3_ddae9bb0-635c-440c-b965-7ec67e8c3294_200x200.jpg?v=1613773234',
 ];
 
-const ImageCarousel = () => {
+export const HomeFootCarousel = () => {
 	const groupSize = 5;
 	const imageGroups = [];
 
@@ -26,14 +26,13 @@ const ImageCarousel = () => {
 						{group.map((src, innerIndex) => (
 							<div
 								key={innerIndex}
-								style={{
-									flex: '0 0 20%',
-									padding: '0 8px',
-									display: 'flex',
-									justifyContent: 'space-around',
-								}}
+								style={{ flex: '0 0 20%', padding: '0 8px' }}
 							>
-								<img src={src} alt={`carousel-img-${index}-${innerIndex}`} />
+								<img
+									src={src}
+									alt={`carousel-img-${index}-${innerIndex}`}
+									style={{ width: '100%', height: 'auto' }}
+								/>
 							</div>
 						))}
 					</div>
@@ -42,5 +41,3 @@ const ImageCarousel = () => {
 		</Carousel>
 	);
 };
-
-export default ImageCarousel;
