@@ -11,7 +11,7 @@ export default function ListOneCategory({ categoryId }) {
 		const fetchData = async () => {
 			try {
 				const response = await axios.get(
-					`http://localhost:3000/category/${categoryId}`
+					`${import.meta.env.VITE_BASE_URL}category/${categoryId}`
 				);
 				setCategory(response.data);
 			} catch (error) {
@@ -52,7 +52,9 @@ export default function ListOneCategory({ categoryId }) {
 											}}
 										>
 											<img
-												src={`http://localhost:3000/${product.variant[0].image}`}
+												src={`${import.meta.env.VITE_BASE_URL}${
+													product.variant[0].image
+												}`}
 												className="hiking-img-product"
 												alt="Hiking"
 											/>
