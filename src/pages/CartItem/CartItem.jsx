@@ -9,6 +9,7 @@ import {
 import { useEffect, useState } from 'react';
 import { clone } from '@utils';
 import axios from 'axios';
+import { Link } from 'react-router-dom';
 
 export const CartItem = () => {
 	const [cart, setCart] = useState([]);
@@ -167,7 +168,10 @@ export const CartItem = () => {
 						Shipping, taxes, and discounts will be calculated at checkout.
 					</div>
 					<div className="action-btn">
-						<Button className="btn-handle">CONTINUE SHOPPING</Button>
+						<Link to={'/collection/all'}>
+							<Button className="btn-handle">CONTINUE SHOPPING</Button>
+						</Link>
+
 						<Button className="btn-handle" onClick={handleSubTotal}>
 							UPDATE CART
 						</Button>
