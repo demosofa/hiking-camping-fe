@@ -4,11 +4,11 @@ import { Contact } from 'components/Contact/Contact';
 import { EmailForm } from 'components/EmailInput/EmailForm';
 import { Featured } from 'components/Featured/Featured';
 import { HeadHomeSlide } from 'components/HeadHomeSlide/HeadHomeSlide';
-import HomeFootCarousel from 'components/HomeFootCarousel/HomeFootCarousel';
-import { PickGradientProducts } from 'components/PickGradientProducts/PickGradientProducts';
 import ShopCarousel from 'components/ShopCarousel/ShopCarousel';
 import BootList from './../../components/BootList/BootList';
 import './Home.css';
+import { PickGradientProducts } from 'components/PickGradientProducts/PickGradientProducts';
+import { HomeFootCarousel } from 'components/HomeFootCarousel/HomeFootCarousel';
 
 export const Home = () => {
 	return (
@@ -83,6 +83,7 @@ export const Home = () => {
 						<div className="tenlist-bg">
 							<p className="tenlist-title">NEW ARRIVALS</p>
 						</div>
+						{/* <TentList /> */}
 
 						<div className="collections">
 							<a href="/collections">
