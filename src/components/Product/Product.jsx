@@ -106,6 +106,28 @@ export const Product = () => {
 		}
 	};
 
+	const addToWishList = async (productId) => {
+		const product = products.find((p) => p.id === productId);
+		const wishListItemData = {
+			productId,
+			quantity: 1,
+			itemPrice: product.variant[0].price,
+			image: product.variant[0].image,
+			nameCart: product.name,
+			totalPrice: product.variant[0].price,
+		};
+
+		try {
+			const addToWishListResponse = await axios.post(
+				API_URL.WISH_LIST,
+				wishListItemData
+			);
+			console.log('Item added to cart:', addToWishListResponse.data);
+		} catch (error) {
+			console.error('Error adding item to cart:', error);
+		}
+	};
+
 	// ...
 	return (
 		<>
@@ -215,7 +237,14 @@ export const Product = () => {
 																addToCart(product.id);
 															}}
 														/>
-														<HeartOutlined className="wishlist-icon" />
+														<HeartOutlined
+															className="wishlist-icon"
+															onClick={(e) => {
+																e.preventDefault();
+																e.stopPropagation();
+																addToWishList(product.id);
+															}}
+														/>
 													</div>
 												</div>
 												<div className="grid-link__title">

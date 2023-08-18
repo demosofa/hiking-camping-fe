@@ -32,7 +32,7 @@ const publicRoutes = [
 			},
 
 			{
-				path: '/hihi',
+				path: '/collections/tents-collection',
 				element: <ProductPage />,
 			},
 
