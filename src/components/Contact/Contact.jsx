@@ -1,18 +1,26 @@
-import { Avatar, List } from 'antd';
+import { List } from 'antd';
+import {
+	PhoneFilled,
+	MailFilled,
+	QuestionCircleFilled,
+} from '@ant-design/icons';
 
 export const Contact = () => {
 	const data = [
 		{
-			title: 'Ant Design Title 1',
-			description: 'Description for Ant Design Title 1',
+			title: 'DO YOU HAVE A QUESTION',
+			description: '500-130-120',
+			icon: <PhoneFilled />,
 		},
 		{
-			title: 'Ant Design Title 2',
-			description: 'Description for Ant Design Title 2',
+			title: 'OFFER QUESTION',
+			description: 'contact@somedomain.com',
+			icon: <MailFilled />,
 		},
 		{
-			title: 'Ant Design Title 3',
-			description: 'Description for Ant Design Title 3',
+			title: 'SUPPORT QUESTION',
+			description: 'support@somedomain.com',
+			icon: <QuestionCircleFilled />,
 		},
 	];
 
@@ -20,14 +28,10 @@ export const Contact = () => {
 		<List
 			itemLayout="horizontal"
 			dataSource={data}
-			renderItem={(item, index) => (
+			renderItem={(item) => (
 				<List.Item style={{ display: 'inline-block', width: '33.3%' }}>
 					<List.Item.Meta
-						avatar={
-							<Avatar
-								src={`https://xsgames.co/randomusers/avatar.php?g=pixel&key=${index}`}
-							/>
-						}
+						avatar={item.icon}
 						title={<a href="https://ant.design">{item.title}</a>}
 						description={item.description}
 					/>

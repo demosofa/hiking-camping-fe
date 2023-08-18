@@ -1,13 +1,14 @@
 import { Button, Col, Row } from 'antd';
 import Category from 'components/Category/Category';
+import { Contact } from 'components/Contact/Contact';
 import { EmailForm } from 'components/EmailInput/EmailForm';
 import { Featured } from 'components/Featured/Featured';
 import { HeadHomeSlide } from 'components/HeadHomeSlide/HeadHomeSlide';
+import HomeFootCarousel from 'components/HomeFootCarousel/HomeFootCarousel';
+import { PickGradientProducts } from 'components/PickGradientProducts/PickGradientProducts';
 import ShopCarousel from 'components/ShopCarousel/ShopCarousel';
 import BootList from './../../components/BootList/BootList';
 import './Home.css';
-import { PickGradientProducts } from 'components/PickGradientProducts/PickGradientProducts';
-import { Contact } from 'components/Contact/Contact';
 
 export const Home = () => {
 	return (
@@ -82,7 +83,6 @@ export const Home = () => {
 						<div className="tenlist-bg">
 							<p className="tenlist-title">NEW ARRIVALS</p>
 						</div>
-						{/* <TentList /> */}
 
 						<div className="collections">
 							<a href="/collections">
@@ -126,6 +126,11 @@ export const Home = () => {
 						</div>
 
 						<Contact />
+
+						<br />
+						<br />
+						<br />
+						<HomeFootCarousel />
 					</Col>
 
 					<Col span={2}></Col>
