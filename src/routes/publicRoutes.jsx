@@ -8,13 +8,14 @@ import { CartItem } from 'pages/CartItem/CartItem';
 import { Trekking } from 'pages/Trekking/Trekking';
 import { Register, Login } from '@pages';
 import { Wishlist } from 'pages/Wishlist/Wishlist';
+import { Home } from 'pages/Home/Home';
 
 /**@type {import("react-router-dom").RouteObject[]} */
 const publicRoutes = [
 	{
 		element: <PublicLayout />,
 		children: [
-			{ path: '/' },
+			{ path: '/', element: <Home /> },
 
 			{ path: '/register', element: <Register /> },
 
