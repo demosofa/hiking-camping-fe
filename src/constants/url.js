@@ -3,4 +3,5 @@ export const API_URL = {
 	PRODUCT: '/product/',
 	AUTH: '/auth/',
 	CART_ITEM: '/cart-item',
+	WISH_LIST: '/wishlist',
 };
