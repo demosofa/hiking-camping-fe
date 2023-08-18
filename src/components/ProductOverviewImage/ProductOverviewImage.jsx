@@ -2,7 +2,7 @@ import ReactImageMagnify from 'react-image-magnify';
 import './ProductOverviewImage.css';
 
 export const ProductOverviewImage = ({ image }) => {
-	const src = `http://localhost:3000/${image}`;
+	const src = `${import.meta.env.VITE_BASE_URL}${image}`;
 	return (
 		<div className="product-image-container">
 			<ReactImageMagnify

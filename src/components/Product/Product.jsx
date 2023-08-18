@@ -220,7 +220,7 @@ export const Product = () => {
 													}}
 												>
 													<img
-														src={`http://localhost:3000/${
+														src={`${import.meta.env.VITE_BASE_URL}${
 															selectedColors[product.id] ||
 															product.variant[0].image
 														}`}

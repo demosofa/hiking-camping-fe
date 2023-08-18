@@ -10,7 +10,7 @@ export const Wishlist = () => {
 	// const [deleted, setDeleted] = useState([]);
 	useEffect(() => {
 		axios
-			.get('http://localhost:3000/wishlist')
+			.get('${import.meta.env.VITE_BASE_URL}wishlist')
 			.then((response) => {
 				setWishlist(response.data.products);
 			})
@@ -21,7 +21,7 @@ export const Wishlist = () => {
 
 	const handleDelete = (id) => {
 		axios
-			.delete(`http://localhost:3000/wishlist/${id}`)
+			.delete(`${import.meta.env.VITE_BASE_URL}wishlist/${id}`)
 			.then(() => {
 				setWishlist((prev) => prev.filter((item) => item.id !== id));
 			})
@@ -50,7 +50,7 @@ export const Wishlist = () => {
 						<span key={variant.id}>
 							<img
 								style={{ maxWidth: 200 }}
-								src={'http://localhost:3000/' + variant.image}
+								src={'${import.meta.env.VITE_BASE_URL}' + variant.image}
 								crossOrigin="anonymous"
 							/>
 							<br />

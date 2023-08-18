@@ -75,7 +75,7 @@ export default function SearchContext() {
 // 	useEffect(() => {
 // 		const fetchData = async () => {
 // 			try {
-// 				const response = await axios.get('http://localhost:3000/category');
+// 				const response = await axios.get('${import.meta.env.VITE_BASE_URL}category');
 // 				setCategories(response.data);
 // 			} catch (error) {
 // 				console.error('Error fetching categories:', error);

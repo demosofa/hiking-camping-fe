@@ -182,7 +182,7 @@ const ProductDetail = ({
 				onCancel={handleCancel}
 			>
 				<Row>
-					<Image width={120} src={`http://localhost:3000/${image}`} />
+					<Image width={120} src={`${import.meta.env.VITE_BASE_URL}${image}`} />
 					<Col>
 						<p>{product.name}</p>
 						<Button href="/cart">View Cart</Button>

@@ -16,7 +16,7 @@ export const CartItem = () => {
 	const [deleted, setDeleted] = useState([]);
 	useEffect(() => {
 		axios
-			.get('http://localhost:3000/cart-item/user')
+			.get('import.meta.env.VITE_BASE_URLcart-item/user')
 			.then((response) => {
 				setCart(response.data);
 			})
@@ -61,7 +61,7 @@ export const CartItem = () => {
 		await Promise.all(
 			deleted.map((id) =>
 				axios
-					.delete(`http://localhost:3000/cart-item/${id}`)
+					.delete(`import.meta.env.VITE_BASE_URLcart-item/${id}`)
 					.then((response) => response.data)
 			)
 		);
@@ -69,7 +69,7 @@ export const CartItem = () => {
 		await Promise.all(
 			cart.map(({ id, quantity, totalPrice, variant }) =>
 				axios
-					.patch(`http://localhost:3000/cart-item/${id}`, {
+					.patch(`import.meta.env.VITE_BASE_URLcart-item/${id}`, {
 						quantity,
 						totalPrice,
 						variantStock: variant.stock,
@@ -88,7 +88,7 @@ export const CartItem = () => {
 				<div>
 					<img
 						style={{ maxWidth: 200 }}
-						src={'http://localhost:3000/' + image}
+						src={'import.meta.env.VITE_BASE_URL' + image}
 					/>
 				</div>
 			),
