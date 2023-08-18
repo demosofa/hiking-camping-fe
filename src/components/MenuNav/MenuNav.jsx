@@ -17,7 +17,7 @@ function MenuNav({ mode = 'horizontal' }) {
 						{
 							type: 'group',
 							label: (
-								<Link className="group-title" to={`/`}>
+								<Link className="group-title" to={`/collections`}>
 									free climbing
 								</Link>
 							),
@@ -31,7 +31,7 @@ function MenuNav({ mode = 'horizontal' }) {
 						{
 							type: 'group',
 							label: (
-								<Link className="group-title" to={`/`}>
+								<Link className="group-title" to={`/collections`}>
 									free climbing
 								</Link>
 							),
@@ -45,7 +45,7 @@ function MenuNav({ mode = 'horizontal' }) {
 						{
 							type: 'group',
 							label: (
-								<Link className="group-title" to={`/`}>
+								<Link className="group-title" to={`/collections`}>
 									free climbing
 								</Link>
 							),
@@ -59,7 +59,7 @@ function MenuNav({ mode = 'horizontal' }) {
 						{
 							type: 'group',
 							label: (
-								<Link className="group-title" to={`/`}>
+								<Link className="group-title" to={`/collections`}>
 									free climbing
 								</Link>
 							),
@@ -80,7 +80,7 @@ function MenuNav({ mode = 'horizontal' }) {
 						{
 							type: 'group',
 							label: (
-								<Link className="group-title" to={`/`}>
+								<Link className="group-title" to={`/collections`}>
 									free climbing
 								</Link>
 							),
@@ -94,7 +94,7 @@ function MenuNav({ mode = 'horizontal' }) {
 						{
 							type: 'group',
 							label: (
-								<Link className="group-title" to={`/`}>
+								<Link className="group-title" to={`/collections`}>
 									free climbing
 								</Link>
 							),
@@ -108,7 +108,7 @@ function MenuNav({ mode = 'horizontal' }) {
 						{
 							type: 'group',
 							label: (
-								<Link className="group-title" to={`/`}>
+								<Link className="group-title" to={`/collections`}>
 									free climbing
 								</Link>
 							),
@@ -122,7 +122,7 @@ function MenuNav({ mode = 'horizontal' }) {
 						{
 							type: 'group',
 							label: (
-								<Link className="group-title" to={`/`}>
+								<Link className="group-title" to={`/collections`}>
 									free climbing
 								</Link>
 							),
@@ -143,7 +143,7 @@ function MenuNav({ mode = 'horizontal' }) {
 						{
 							type: 'group',
 							label: (
-								<Link className="group-title" to={`/`}>
+								<Link className="group-title" to={`/collections/all`}>
 									free climbing
 								</Link>
 							),
@@ -157,7 +157,7 @@ function MenuNav({ mode = 'horizontal' }) {
 						{
 							type: 'group',
 							label: (
-								<Link className="group-title" to={`/`}>
+								<Link className="group-title" to={`/collections/all`}>
 									free climbing
 								</Link>
 							),
@@ -171,7 +171,7 @@ function MenuNav({ mode = 'horizontal' }) {
 						{
 							type: 'group',
 							label: (
-								<Link className="group-title" to={`/`}>
+								<Link className="group-title" to={`/collections/all`}>
 									free climbing
 								</Link>
 							),
@@ -185,7 +185,7 @@ function MenuNav({ mode = 'horizontal' }) {
 						{
 							type: 'group',
 							label: (
-								<Link className="group-title" to={`/`}>
+								<Link className="group-title" to={`/collections/all`}>
 									free climbing
 								</Link>
 							),
