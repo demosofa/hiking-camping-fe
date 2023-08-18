@@ -6,11 +6,13 @@ import {
 	SearchOutlined,
 	ShoppingCartOutlined,
 } from '@ant-design/icons';
+import { HeadOfHeader } from 'components/HeadOfHeader/HeadOfHeader';
 
 const { Sider } = Layout;
 export function Header() {
 	return (
 		<>
+			<HeadOfHeader />
 			<nav className="navbar-container">
 				<img
 					className="home-logo"

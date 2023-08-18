@@ -16,7 +16,6 @@ export const ProductOverview = () => {
 
 	const selectedVariant = useMemo(() => {
 		if (loadingProductDetail) return null;
-		console.log(productDetail);
 		let variant = productDetail?.variant?.find((item) => {
 			return item.color.id === selectedColor && item.size.id === selectedSize;
 		});
